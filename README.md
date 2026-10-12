@@ -4,6 +4,24 @@ TVDeck is a Windows desktop application for managing Android TV, Google TV, and 
 
 ![TVDeck home screen](docs/screenshots/home.png)
 
+## Screenshots
+
+| Home | Screen & remote | App store |
+|------|----------------|-----------|
+| ![Home](docs/screenshots/home.png) | ![Screen and remote](docs/screenshots/screen-remote.png) | ![App store](docs/screenshots/app-store.png) |
+
+| Recipes | Tweaks | Debloater |
+|---------|--------|-----------|
+| ![Recipes](docs/screenshots/recipes.png) | ![Tweaks](docs/screenshots/tweaks.png) | ![Debloater](docs/screenshots/debloater.png) |
+
+| Files | Backup | Console |
+|-------|--------|---------|
+| ![Files](docs/screenshots/files.png) | ![Backup](docs/screenshots/backup.png) | ![Console](docs/screenshots/console.png) |
+
+| Settings |
+|----------|
+| ![Settings](docs/screenshots/settings.png) |
+
 ## Features
 
 - **Debloating** — Remove pre-installed apps from a curated list of packages verified safe to remove. Every removal is preceded by an automatic snapshot.
