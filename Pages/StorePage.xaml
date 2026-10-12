@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Page
+    x:Class="TVDeck.Pages.StorePage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:core="using:TVDeck.Core"
+    AllowDrop="True" DragOver="Page_DragOver" Drop="Page_Drop">
+
+    <Grid Padding="36,24,36,0" RowSpacing="16">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <Grid ColumnSpacing="12">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+            <StackPanel>
+                <TextBlock Style="{StaticResource TitleTextBlockStyle}" Text="App store" />
+                <TextBlock Style="{StaticResource BodyTextBlockStyle}" Foreground="{ThemeResource TextFillColorSecondaryBrush}"
+                           Text="Always the newest version, straight from each developer. Drop any APK here to install it." />
+            </StackPanel>
+            <StackPanel Grid.Column="1" Orientation="Horizontal" Spacing="8" VerticalAlignment="Center">
+                <Button Click="InstallFile_Click">
+                    <StackPanel Orientation="Horizontal" Spacing="8"><FontIcon Glyph="&#xE8E5;" FontSize="14" /><TextBlock Text="Install from file" /></StackPanel>
+                </Button>
+                <Button Click="AddApp_Click">
+                    <StackPanel Orientation="Horizontal" Spacing="8"><FontIcon Glyph="&#xE710;" FontSize="14" /><TextBlock Text="Add an app" /></StackPanel>
+                </Button>
+            </StackPanel>
+        </Grid>
+
+        <StackPanel Grid.Row="1" Spacing="4">
+            <StackPanel Orientation="Horizontal" Spacing="16">
+                <AutoSuggestBox x:Name="Search" PlaceholderText="Search apps" Width="280" QueryIcon="Find" VerticalAlignment="Center"
+                                TextChanged="Search_TextChanged" AutomationProperties.Name="Search apps" />
+            </StackPanel>
+            <!-- Many categories: scroll sideways instead of clipping -->
+            <ScrollViewer HorizontalScrollMode="Enabled" HorizontalScrollBarVisibility="Auto" VerticalScrollMode="Disabled" VerticalScrollBarVisibility="Disabled">
+                <SelectorBar x:Name="Categories" SelectionChanged="Categories_SelectionChanged" />
+            </ScrollViewer>
+        </StackPanel>
+
+        <GridView
+            x:Name="Grid"
+            Grid.Row="2"
+            Padding="0,0,0,24"
+            IsItemClickEnabled="False"
+            SelectionMode="None">
+            <GridView.ItemContainerStyle>
+                <Style TargetType="GridViewItem" BasedOn="{StaticResource DefaultGridViewItemStyle}">
+                    <Setter Property="Margin" Value="0,0,12,12" />
+                </Style>
+            </GridView.ItemContainerStyle>
+            <GridView.ItemTemplate>
+                <DataTemplate x:DataType="core:StoreItem">
+                    <Grid Width="320" Height="184" Padding="16" CornerRadius="{StaticResource OverlayCornerRadius}" BorderThickness="1" RowSpacing="10"
+                          BorderBrush="{ThemeResource CardStrokeColorDefaultBrush}"
+                          Background="{ThemeResource CardBackgroundFillColorDefaultBrush}">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <Grid ColumnSpacing="12">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Border Width="44" Height="44" CornerRadius="10" Background="{x:Bind Tile}">
+                                <TextBlock Text="{x:Bind Initial}" FontSize="20" FontWeight="SemiBold" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                            </Border>
+                            <StackPanel Grid.Column="1" VerticalAlignment="Center">
+                                <StackPanel Orientation="Horizontal" Spacing="6">
+                                    <TextBlock Style="{StaticResource BodyStrongTextBlockStyle}" Text="{x:Bind Name}" TextTrimming="CharacterEllipsis" />
+                                    <Border Visibility="{x:Bind GrayVisibility}" CornerRadius="4" Padding="5,0" Background="{ThemeResource SystemFillColorCautionBackgroundBrush}" VerticalAlignment="Center"
+                                            ToolTipService.ToolTip="Gray-area app: may access unlicensed content. You're responsible for how you use it.">
+                                        <TextBlock Text="Gray area" FontSize="11" Foreground="{ThemeResource SystemFillColorCautionBrush}" />
+                                    </Border>
+                                </StackPanel>
+                                <TextBlock Style="{StaticResource CaptionTextBlockStyle}" Foreground="{ThemeResource TextFillColorSecondaryBrush}" Text="{x:Bind SourceLabel}" TextTrimming="CharacterEllipsis" />
+                            </StackPanel>
+                        </Grid>
+                        <TextBlock Grid.Row="1" Style="{StaticResource BodyTextBlockStyle}" Foreground="{ThemeResource TextFillColorSecondaryBrush}"
+                                   Text="{x:Bind Description}" ToolTipService.ToolTip="{x:Bind Description}" TextWrapping="Wrap" MaxLines="3" TextTrimming="CharacterEllipsis" />
+                        <Grid Grid.Row="2" ColumnSpacing="8">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
+                            <StackPanel Orientation="Horizontal" Spacing="6" VerticalAlignment="Center">
+                                <ProgressRing Width="14" Height="14" IsActive="{x:Bind Busy, Mode=OneWay}" Visibility="{x:Bind BusyVisibility, Mode=OneWay}" />
+                                <TextBlock Style="{StaticResource CaptionTextBlockStyle}" Text="{x:Bind Status, Mode=OneWay}" TextTrimming="CharacterEllipsis" VerticalAlignment="Center" MaxWidth="150" />
+                            </StackPanel>
+                            <Button Grid.Column="1" Content="Open" AutomationProperties.Name="{x:Bind OpenName}" Visibility="{x:Bind OpenVisibility, Mode=OneWay}" Click="Open_Click" Tag="{x:Bind}" IsEnabled="{x:Bind NotBusy, Mode=OneWay}" />
+                            <Button Grid.Column="2" Style="{x:Bind ActionStyle}" Content="{x:Bind ActionText, Mode=OneWay}" AutomationProperties.Name="{x:Bind ActionName, Mode=OneWay}" Click="Install_Click" Tag="{x:Bind}"
+                                    IsEnabled="{x:Bind NotBusy, Mode=OneWay}" />
+                        </Grid>
+                    </Grid>
+                </DataTemplate>
+            </GridView.ItemTemplate>
+        </GridView>
+
+        <StackPanel x:Name="Empty" Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Center" Spacing="8" Visibility="Collapsed">
+            <FontIcon Glyph="&#xE721;" FontSize="36" Foreground="{ThemeResource TextFillColorTertiaryBrush}" />
+            <TextBlock Style="{StaticResource BodyStrongTextBlockStyle}" HorizontalAlignment="Center" Text="No apps match" />
+            <TextBlock Foreground="{ThemeResource TextFillColorSecondaryBrush}" HorizontalAlignment="Center" Text="Try another search, or add the app yourself." />
+        </StackPanel>
+    </Grid>
+</Page>

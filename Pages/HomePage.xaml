@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Page
+    x:Class="TVDeck.Pages.HomePage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <ScrollViewer>
+        <StackPanel MaxWidth="1100" Padding="36,24,36,36" Spacing="20">
+
+            <!-- Hero: connected device -->
+            <Grid x:Name="Hero" CornerRadius="12" Padding="28,24" BorderThickness="1"
+                  BorderBrush="{ThemeResource CardStrokeColorDefaultBrush}"
+                  Background="{ThemeResource CardBackgroundFillColorDefaultBrush}" ColumnSpacing="24">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+                <!-- Brand logos are drawn for light backgrounds, so the plate stays light in both themes. -->
+                <Border Width="168" Height="112" CornerRadius="10" Padding="8" RequestedTheme="Light"
+                        Background="{ThemeResource SolidBackgroundFillColorTertiaryBrush}">
+                    <Image x:Name="HeroPhoto" Stretch="Uniform" AutomationProperties.Name="Photo of the connected device" />
+                </Border>
+                <StackPanel Grid.Column="1" VerticalAlignment="Center" Spacing="2">
+                    <TextBlock x:Name="HeroName" Style="{StaticResource TitleTextBlockStyle}" Text="No TV connected" />
+                    <TextBlock x:Name="HeroSub" Style="{StaticResource BodyTextBlockStyle}" Foreground="{ThemeResource TextFillColorSecondaryBrush}"
+                               Text="Turn on network debugging on your TV, then connect below." TextWrapping="Wrap" />
+                </StackPanel>
+                <StackPanel Grid.Column="2" Orientation="Horizontal" Spacing="8" VerticalAlignment="Center">
+                    <Button x:Name="MirrorBtn" Style="{StaticResource AccentButtonStyle}" Click="Mirror_Click" IsEnabled="False">
+                        <StackPanel Orientation="Horizontal" Spacing="8"><FontIcon Glyph="&#xE7F4;" FontSize="16" /><TextBlock Text="Open screen" /></StackPanel>
+                    </Button>
+                    <Button x:Name="StoreBtn" Click="Store_Click" IsEnabled="False">
+                        <StackPanel Orientation="Horizontal" Spacing="8"><FontIcon Glyph="&#xE719;" FontSize="16" /><TextBlock Text="Get apps" /></StackPanel>
+                    </Button>
+                    <DropDownButton x:Name="PowerBtn" AutomationProperties.Name="Power options" IsEnabled="False">
+                        <FontIcon Glyph="&#xE7E8;" FontSize="16" />
+                        <DropDownButton.Flyout>
+                            <MenuFlyout Placement="BottomEdgeAlignedRight">
+                                <MenuFlyoutItem Text="Sleep" Click="Sleep_Click" />
+                                <MenuFlyoutItem Text="Wake" Click="Wake_Click" />
+                                <MenuFlyoutSeparator />
+                                <MenuFlyoutItem Text="Restart" Click="Reboot_Click" />
+                                <MenuFlyoutItem Text="Restart to recovery…" Click="Recovery_Click" />
+                                <MenuFlyoutSeparator />
+                                <MenuFlyoutItem Text="Disconnect" Click="Disconnect_Click" />
+                            </MenuFlyout>
+                        </DropDownButton.Flyout>
+                    </DropDownButton>
+                </StackPanel>
+            </Grid>
+
+            <!-- Device facts -->
+            <ItemsRepeater x:Name="Facts" Visibility="Collapsed">
+                <ItemsRepeater.Layout>
+                    <UniformGridLayout MinItemWidth="240" MinItemHeight="72" MinColumnSpacing="12" MinRowSpacing="12" ItemsStretch="Fill" />
+                </ItemsRepeater.Layout>
+                <ItemsRepeater.ItemTemplate>
+                    <DataTemplate x:DataType="x:Object">
+                        <Border CornerRadius="{StaticResource OverlayCornerRadius}" Padding="16,12" BorderThickness="1"
+                                BorderBrush="{ThemeResource CardStrokeColorDefaultBrush}"
+                                Background="{ThemeResource CardBackgroundFillColorDefaultBrush}">
+                            <StackPanel Spacing="2">
+                                <TextBlock Style="{StaticResource CaptionTextBlockStyle}" Foreground="{ThemeResource TextFillColorSecondaryBrush}" Text="{Binding Key}" />
+                                <TextBlock Style="{StaticResource BodyStrongTextBlockStyle}" Text="{Binding Value}" ToolTipService.ToolTip="{Binding Value}" TextTrimming="CharacterEllipsis" IsTextSelectionEnabled="True" />
+                            </StackPanel>
+                        </Border>
+                    </DataTemplate>
+                </ItemsRepeater.ItemTemplate>
+            </ItemsRepeater>
+
+            <!-- Connect -->
+            <TextBlock Style="{StaticResource SubtitleTextBlockStyle}" Text="Connect a TV" Margin="0,12,0,0" />
+            <Grid ColumnSpacing="12">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <StackPanel Padding="20" Spacing="12" CornerRadius="{StaticResource OverlayCornerRadius}" BorderThickness="1"
+                            BorderBrush="{ThemeResource CardStrokeColorDefaultBrush}"
+                            Background="{ThemeResource CardBackgroundFillColorDefaultBrush}">
+                    <TextBlock Style="{StaticResource BodyStrongTextBlockStyle}" Text="Over Wi-Fi" />
+                    <StackPanel Orientation="Horizontal" Spacing="8">
+                        <TextBox x:Name="HostBox" Header="TV address" PlaceholderText="192.168.1.50" Width="220" KeyDown="HostBox_KeyDown" />
+                        <Button Style="{StaticResource AccentButtonStyle}" Content="Connect" Click="Connect_Click" VerticalAlignment="Bottom" />
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Spacing="8">
+                        <Button Click="Scan_Click">
+                            <StackPanel Orientation="Horizontal" Spacing="8"><FontIcon Glyph="&#xE721;" FontSize="14" /><TextBlock Text="Find TVs on my network" /></StackPanel>
+                        </Button>
+                        <ProgressRing x:Name="ScanRing" IsActive="False" Width="20" Height="20" />
+                    </StackPanel>
+                    <ItemsControl x:Name="Found">
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate x:DataType="x:String">
+                                <HyperlinkButton Content="{x:Bind}" Click="Found_Click" Tag="{x:Bind}" />
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>
+                </StackPanel>
+
+                <StackPanel Grid.Column="1" Padding="20" Spacing="12" CornerRadius="{StaticResource OverlayCornerRadius}" BorderThickness="1"
+                            BorderBrush="{ThemeResource CardStrokeColorDefaultBrush}"
+                            Background="{ThemeResource CardBackgroundFillColorDefaultBrush}">
+                    <TextBlock Style="{StaticResource BodyStrongTextBlockStyle}" Text="Pair with a code (Google TV, Android 11+)" />
+                    <StackPanel Orientation="Horizontal" Spacing="8">
+                        <TextBox x:Name="PairHost" Header="Pairing address" PlaceholderText="192.168.1.50:37123" Width="200" />
+                        <TextBox x:Name="PairCode" Header="Code" PlaceholderText="123456" Width="100" MaxLength="6" InputScope="Number" />
+                        <Button Content="Pair" Click="Pair_Click" VerticalAlignment="Bottom" />
+                    </StackPanel>
+                    <TextBlock Style="{StaticResource CaptionTextBlockStyle}" Foreground="{ThemeResource TextFillColorSecondaryBrush}" TextWrapping="Wrap"
+                               Text="On the TV: Settings › System › Developer options › Wireless debugging › Pair device with pairing code." />
+                </StackPanel>
+            </Grid>
+
+            <Expander Header="How do I turn on debugging on my TV?" HorizontalAlignment="Stretch" HorizontalContentAlignment="Left">
+                <StackPanel Spacing="10" Padding="4">
+                    <TextBlock TextWrapping="Wrap"><Run FontWeight="SemiBold">Google TV / Android TV:</Run> Settings › System › About › select <Run FontStyle="Italic">Android TV OS build</Run> 7 times. Then Settings › System › Developer options › turn on <Run FontWeight="SemiBold">USB debugging</Run> (and Network debugging if listed).</TextBlock>
+                    <TextBlock TextWrapping="Wrap"><Run FontWeight="SemiBold">Fire TV:</Run> Settings › My Fire TV › About › select your device name 7 times. Then Settings › My Fire TV › Developer options › turn on <Run FontWeight="SemiBold">ADB debugging</Run> and allow apps from unknown sources.</TextBlock>
+                    <TextBlock TextWrapping="Wrap"><Run FontWeight="SemiBold">Find the address:</Run> Settings › Network › your Wi-Fi network shows the IP address. When you connect, accept the "Allow USB debugging?" prompt on the TV and tick "Always allow".</TextBlock>
+                </StackPanel>
+            </Expander>
+        </StackPanel>
+    </ScrollViewer>
+</Page>

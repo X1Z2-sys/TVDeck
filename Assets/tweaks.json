@@ -1,0 +1,515 @@
+[
+  {
+    "id": "anim",
+    "group": "Speed",
+    "title": "Animation speed",
+    "description": "Shorter animations make menus feel snappier.",
+    "check": "settings get global animator_duration_scale",
+    "choices": {
+      "Off (fastest)": "0.0",
+      "Fast (0.5×)": "0.5",
+      "Normal": "1.0"
+    },
+    "apply": [
+      "settings put global window_animation_scale {v}",
+      "settings put global transition_animation_scale {v}",
+      "settings put global animator_duration_scale {v}"
+    ],
+    "undo": [
+      "settings put global window_animation_scale 1.0",
+      "settings put global transition_animation_scale 1.0",
+      "settings put global animator_duration_scale 1.0"
+    ],
+    "recommend": "0.5"
+  },
+  {
+    "id": "adblock_dns",
+    "group": "Privacy & ads",
+    "title": "Private DNS (ad blocking)",
+    "description": "Every app's DNS lookups go to this encrypted resolver, which can block ads and trackers TV-wide — no app needed. Free ad-supported apps (Pluto, Tubi) may stop playing with ad blocking on. If the TV says \"No internet\", choose Default.",
+    "check": "settings get global private_dns_specifier",
+    "apply": [
+      "settings put global private_dns_mode hostname",
+      "settings put global private_dns_specifier {v}"
+    ],
+    "undo": [
+      "settings put global private_dns_mode opportunistic",
+      "settings delete global private_dns_specifier"
+    ],
+    "choices": {
+      "Default (your router)": "",
+      "AdGuard — blocks ads & trackers": "dns.adguard-dns.com",
+      "AdGuard Family — also adult sites": "family.adguard-dns.com",
+      "Control D — blocks ads & trackers": "p2.freedns.controld.com",
+      "Quad9 — blocks malware only": "dns.quad9.net"
+    }
+  },
+  {
+    "id": "limit_ads",
+    "group": "Privacy & ads",
+    "title": "Limit ad tracking",
+    "description": "Asks apps not to use your advertising ID for personalized ads.",
+    "check": "settings get secure limit_ad_tracking",
+    "on": "1",
+    "apply": [
+      "settings put secure limit_ad_tracking 1"
+    ],
+    "undo": [
+      "settings put secure limit_ad_tracking 0"
+    ],
+    "recommend": "on"
+  },
+  {
+    "id": "fire_metrics",
+    "group": "Privacy & ads",
+    "title": "Stop Amazon usage data uploads",
+    "description": "Turns off Fire OS usage metrics uploads.",
+    "platforms": "firetv",
+    "check": "settings get secure USAGE_METRICS_UPLOAD_ENABLED",
+    "on": "0",
+    "apply": [
+      "settings put secure USAGE_METRICS_UPLOAD_ENABLED 0"
+    ],
+    "undo": [
+      "settings put secure USAGE_METRICS_UPLOAD_ENABLED 1"
+    ],
+    "recommend": "on"
+  },
+  {
+    "id": "surround",
+    "group": "Picture & sound",
+    "title": "Surround sound output",
+    "description": "Send Dolby/DTS straight to your soundbar or receiver. Auto asks the TV what it supports.",
+    "check": "settings get global encoded_surround_output",
+    "choices": {
+      "Auto": "0",
+      "Never (stereo)": "1",
+      "Always (passthrough)": "2"
+    },
+    "apply": [
+      "settings put global encoded_surround_output {v}"
+    ],
+    "undo": [
+      "settings put global encoded_surround_output 0"
+    ]
+  },
+  {
+    "id": "stay_awake",
+    "group": "Power & screensaver",
+    "title": "Stay awake while powered",
+    "description": "Stops the device dropping the HDMI signal during long downloads or background playback.",
+    "check": "settings get global stay_on_while_plugged_in",
+    "on": "3",
+    "apply": [
+      "settings put global stay_on_while_plugged_in 3"
+    ],
+    "undo": [
+      "settings put global stay_on_while_plugged_in 0"
+    ]
+  },
+  {
+    "id": "screensaver_delay",
+    "group": "Power & screensaver",
+    "title": "Screensaver starts after",
+    "description": "How long the TV waits with no input before the screensaver comes on.",
+    "check": "settings get secure sleep_timeout",
+    "choices": {
+      "5 minutes": "300000",
+      "15 minutes": "900000",
+      "30 minutes": "1800000",
+      "1 hour": "3600000"
+    },
+    "apply": [
+      "settings put secure sleep_timeout {v}"
+    ],
+    "undo": [
+      "settings put secure sleep_timeout 900000"
+    ]
+  },
+  {
+    "id": "aerial",
+    "group": "Power & screensaver",
+    "title": "Use Aerial Views as screensaver",
+    "description": "Apple TV-style 4K aerial screensaver. Install Aerial Views from the App store first.",
+    "check": "settings get secure screensaver_components",
+    "on": "com.neilturner.aerialviews/.ui.screensaver.DreamActivity",
+    "apply": [
+      "pm path com.neilturner.aerialviews",
+      "settings put secure screensaver_components com.neilturner.aerialviews/.ui.screensaver.DreamActivity",
+      "settings put secure screensaver_enabled 1"
+    ],
+    "undo": [
+      "settings delete secure screensaver_components"
+    ]
+  },
+  {
+    "id": "devopts",
+    "group": "Advanced",
+    "title": "Developer options menu",
+    "description": "Shows or hides the developer options menu in the TV's settings.",
+    "check": "settings get global development_settings_enabled",
+    "on": "1",
+    "apply": [
+      "settings put global development_settings_enabled 1"
+    ],
+    "undo": [
+      "settings put global development_settings_enabled 0"
+    ]
+  },
+  {
+    "id": "ntp",
+    "group": "Advanced",
+    "title": "Fix the clock (Google time server)",
+    "description": "Use time.google.com if the TV's time drifts or apps complain about certificates.",
+    "check": "settings get global ntp_server",
+    "on": "time.google.com",
+    "apply": [
+      "settings put global ntp_server time.google.com"
+    ],
+    "undo": [
+      "settings delete global ntp_server"
+    ]
+  },
+  {
+    "id": "match_frame_rate",
+    "group": "Picture & sound",
+    "title": "Match content frame rate",
+    "description": "Switch the TV's refresh rate to match the video (24p films without judder). Android 12+ setting; Google TV and newer Android TV.",
+    "platforms": "google",
+    "check": "settings get secure match_content_frame_rate",
+    "choices": {
+      "Never": "0",
+      "Only if seamless": "1",
+      "Always": "2"
+    },
+    "apply": [
+      "settings put secure match_content_frame_rate {v}"
+    ],
+    "undo": [
+      "settings delete secure match_content_frame_rate"
+    ]
+  },
+  {
+    "id": "ui_sounds",
+    "group": "Picture & sound",
+    "title": "Remote click sounds",
+    "description": "Play a click sound when you move around menus.",
+    "platforms": "all",
+    "check": "settings get system sound_effects_enabled",
+    "on": "1",
+    "apply": [
+      "settings put system sound_effects_enabled 1"
+    ],
+    "undo": [
+      "settings put system sound_effects_enabled 0"
+    ]
+  },
+  {
+    "id": "fire_marketing_metrics",
+    "group": "Privacy & ads",
+    "title": "Stop marketing usage data",
+    "description": "Stop Fire OS sharing app-usage data for marketing (Settings → Preferences → Privacy).",
+    "platforms": "firetv",
+    "check": "settings get secure usage_metrics_marketing_enabled",
+    "on": "0",
+    "apply": [
+      "settings put secure usage_metrics_marketing_enabled 0"
+    ],
+    "undo": [
+      "settings put secure usage_metrics_marketing_enabled 1"
+    ],
+    "recommend": "on"
+  },
+  {
+    "id": "hdmi_cec",
+    "group": "Power & screensaver",
+    "title": "HDMI-CEC control",
+    "description": "Let the TV remote, soundbar and this device control each other over HDMI.",
+    "platforms": "all",
+    "check": "settings get global hdmi_control_enabled",
+    "on": "1",
+    "apply": [
+      "settings put global hdmi_control_enabled 1"
+    ],
+    "undo": [
+      "settings put global hdmi_control_enabled 0"
+    ]
+  },
+  {
+    "id": "cec_wake",
+    "group": "Power & screensaver",
+    "title": "Turn the TV on with this device",
+    "description": "Waking this device also switches the TV on and to its input.",
+    "platforms": "all",
+    "check": "settings get global hdmi_control_auto_wakeup_enabled",
+    "on": "1",
+    "apply": [
+      "settings put global hdmi_control_auto_wakeup_enabled 1"
+    ],
+    "undo": [
+      "settings put global hdmi_control_auto_wakeup_enabled 0"
+    ]
+  },
+  {
+    "id": "cec_standby",
+    "group": "Power & screensaver",
+    "title": "Sleep when the TV turns off",
+    "description": "Put this device to sleep when the TV is switched off.",
+    "platforms": "all",
+    "check": "settings get global hdmi_control_auto_device_off_enabled",
+    "on": "1",
+    "apply": [
+      "settings put global hdmi_control_auto_device_off_enabled 1"
+    ],
+    "undo": [
+      "settings put global hdmi_control_auto_device_off_enabled 0"
+    ]
+  },
+  {
+    "id": "debloat_tutorials",
+    "group": "Advanced",
+    "title": "Remove Fire TV tips and tutorials",
+    "description": "Disables the pop-up tutorials, tips and release-note screens. Re-enable any time.",
+    "platforms": "firetv",
+    "check": "pm list packages -d com.amazon.sneakpeek",
+    "on": "package:com.amazon.sneakpeek",
+    "apply": [
+      "pm disable-user --user 0 com.amazon.sneakpeek",
+      "pm disable-user --user 0 com.amazon.tmm.tutorial",
+      "pm disable-user --user 0 com.amazon.storm.lightning.tutorial",
+      "pm disable-user --user 0 com.amazon.tv.releasenotes"
+    ],
+    "undo": [
+      "pm enable com.amazon.sneakpeek",
+      "pm enable com.amazon.tmm.tutorial",
+      "pm enable com.amazon.storm.lightning.tutorial",
+      "pm enable com.amazon.tv.releasenotes"
+    ],
+    "recommend": "on"
+  },
+  {
+    "id": "debloat_shopping",
+    "group": "Advanced",
+    "title": "Remove Amazon shopping and news apps",
+    "description": "Disables Amazon Shop TV, Amazon miniTV and the Fire TV news channel (hedwig).",
+    "platforms": "firetv",
+    "check": "pm list packages -d com.amazon.shoptv.client",
+    "on": "package:com.amazon.shoptv.client",
+    "apply": [
+      "pm disable-user --user 0 com.amazon.shoptv.client",
+      "pm disable-user --user 0 com.amazon.minitv.android.app",
+      "pm disable-user --user 0 com.amazon.hedwig"
+    ],
+    "undo": [
+      "pm enable com.amazon.shoptv.client",
+      "pm enable com.amazon.minitv.android.app",
+      "pm enable com.amazon.hedwig"
+    ]
+  },
+  {
+    "id": "debloat_telemetry",
+    "group": "Advanced",
+    "title": "Disable Amazon diagnostics uploads",
+    "description": "Disables Amazon's wireless metrics collector and diagnostics logger (aria). Can slow down Amazon support troubleshooting.",
+    "platforms": "firetv",
+    "check": "pm list packages -d com.amazon.wirelessmetrics.service",
+    "on": "package:com.amazon.wirelessmetrics.service",
+    "apply": [
+      "pm disable-user --user 0 com.amazon.wirelessmetrics.service",
+      "pm disable-user --user 0 com.amazon.aria"
+    ],
+    "undo": [
+      "pm enable com.amazon.wirelessmetrics.service",
+      "pm enable com.amazon.aria"
+    ]
+  },
+  {
+    "id": "shield_telemetry",
+    "group": "Advanced",
+    "title": "Disable NVIDIA telemetry",
+    "description": "Disables NVIDIA's stats and feedback reporters on SHIELD.",
+    "platforms": "shield",
+    "check": "pm list packages -d com.nvidia.stats",
+    "on": "package:com.nvidia.stats",
+    "apply": [
+      "pm disable-user --user 0 com.nvidia.stats",
+      "pm disable-user --user 0 com.nvidia.feedback"
+    ],
+    "undo": [
+      "pm enable com.nvidia.stats",
+      "pm enable com.nvidia.feedback"
+    ],
+    "recommend": "on"
+  },
+  {
+    "id": "gtv_recs",
+    "group": "Advanced",
+    "title": "Remove Google TV recommendation rows",
+    "description": "Disables the service that fills the home screen with recommendations.",
+    "platforms": "google",
+    "check": "pm list packages -d com.google.android.tvrecommendations",
+    "on": "package:com.google.android.tvrecommendations",
+    "apply": [
+      "pm disable-user --user 0 com.google.android.tvrecommendations"
+    ],
+    "undo": [
+      "pm enable com.google.android.tvrecommendations"
+    ]
+  },
+  {
+    "id": "wifi_nosleep",
+    "group": "Network",
+    "title": "Keep Wi-Fi on during sleep",
+    "description": "Wi-Fi stays connected while the TV sleeps, so downloads, updates and casts resume instantly.",
+    "platforms": "all",
+    "risk": "low",
+    "apply": [
+      "settings put global wifi_sleep_policy 2"
+    ],
+    "undo": [
+      "settings delete global wifi_sleep_policy"
+    ],
+    "check": "settings get global wifi_sleep_policy",
+    "on": "2",
+    "recommend": "on"
+  },
+  {
+    "id": "adb_noverify",
+    "group": "Speed",
+    "title": "Skip verification for ADB installs",
+    "description": "Sideloading via ADB is not re-scanned by the package verifier. Faster installs of large APKs; Play-store installs are still verified.",
+    "platforms": "google",
+    "risk": "medium",
+    "apply": [
+      "settings put global verifier_verify_adb_installs 0"
+    ],
+    "undo": [
+      "settings delete global verifier_verify_adb_installs"
+    ],
+    "check": "settings get global verifier_verify_adb_installs",
+    "on": "0"
+  },
+  {
+    "id": "fire_acr",
+    "group": "Privacy & ads",
+    "title": "Disable content recognition (ACR)",
+    "description": "Fire TV stops fingerprinting what's on screen for ads. (firestrip telemetry.py)",
+    "platforms": "firetv",
+    "risk": "low",
+    "apply": [
+      "settings put global amazon:acr_enabled 0"
+    ],
+    "undo": [
+      "settings put global amazon:acr_enabled 1"
+    ],
+    "check": "settings get global amazon:acr_enabled",
+    "on": "0",
+    "recommend": "on"
+  },
+  {
+    "id": "fire_sidewalk",
+    "group": "Privacy & ads",
+    "title": "Disable Amazon Sidewalk",
+    "description": "The TV stops sharing a small slice of your bandwidth with Amazon's Sidewalk mesh network. (firestrip telemetry.py)",
+    "platforms": "firetv",
+    "risk": "low",
+    "apply": [
+      "settings put global amazon:sidewalk_enabled 0"
+    ],
+    "undo": [
+      "settings put global amazon:sidewalk_enabled 1"
+    ],
+    "check": "settings get global amazon:sidewalk_enabled",
+    "on": "0",
+    "recommend": "on"
+  },
+  {
+    "id": "disable_captive_portal",
+    "group": "Network",
+    "title": "Skip Google's internet check",
+    "description": "Stops the TV pinging Google each time it joins a network. Fixes a false \"No internet\" warning behind Pi-hole or firewalls that block Google. Downside: hotel/public Wi-Fi sign-in pages won't pop up.",
+    "platforms": "all",
+    "risk": "low",
+    "apply": [
+      "settings put global captive_portal_mode 0"
+    ],
+    "undo": [
+      "settings delete global captive_portal_mode"
+    ],
+    "check": "settings get global captive_portal_mode",
+    "on": "0"
+  },
+  {
+    "id": "optimize_apps",
+    "group": "Speed",
+    "title": "Optimize apps now",
+    "description": "Runs Android's own overnight app optimization immediately, so apps you just installed open faster. Takes a few minutes. Nothing to undo — Android would do this itself eventually.",
+    "apply": [
+      "cmd package bg-dexopt-job"
+    ],
+    "undo": []
+  },
+  {
+    "id": "clear_caches",
+    "group": "Speed",
+    "title": "Clear all app caches",
+    "description": "Deletes every app's temporary cache files to free storage. Logins, settings and downloads are kept; apps rebuild their caches as needed. Nothing to undo.",
+    "apply": [
+      "pm trim-caches 999999999999"
+    ],
+    "undo": []
+  },
+  {
+    "id": "grant_buttonmapper",
+    "group": "Remote & input",
+    "title": "Button Mapper: full access",
+    "description": "Lets Button Mapper turn on its own accessibility service and unlock all actions — remap Netflix/YouTube/app buttons on any remote. Shown only when Button Mapper is installed. (setup.buttonmapper.app)",
+    "requires": "flar2.homebutton",
+    "check": "dumpsys package flar2.homebutton | grep -q 'WRITE_SECURE_SETTINGS: granted=true' && echo on",
+    "on": "on",
+    "apply": [
+      "pm grant flar2.homebutton android.permission.WRITE_SECURE_SETTINGS"
+    ],
+    "undo": [
+      "pm revoke flar2.homebutton android.permission.WRITE_SECURE_SETTINGS"
+    ]
+  },
+  {
+    "id": "grant_tvquickactions",
+    "group": "Remote & input",
+    "title": "tvQuickActions: full access",
+    "description": "Grants the three permissions tvQuickActions asks for (secure settings, draw over apps, usage access) — the TV-remote clicking you'd otherwise do in its setup. Shown only when it's installed. (tvdevinfo.com docs)",
+    "requires": "dev.vodik7.tvquickactions",
+    "check": "dumpsys package dev.vodik7.tvquickactions | grep -q 'WRITE_SECURE_SETTINGS: granted=true' && echo on",
+    "on": "on",
+    "apply": [
+      "pm grant dev.vodik7.tvquickactions android.permission.WRITE_SECURE_SETTINGS",
+      "appops set dev.vodik7.tvquickactions SYSTEM_ALERT_WINDOW allow",
+      "appops set dev.vodik7.tvquickactions GET_USAGE_STATS allow"
+    ],
+    "undo": [
+      "pm revoke dev.vodik7.tvquickactions android.permission.WRITE_SECURE_SETTINGS",
+      "appops set dev.vodik7.tvquickactions SYSTEM_ALERT_WINDOW default",
+      "appops set dev.vodik7.tvquickactions GET_USAGE_STATS default"
+    ]
+  },
+  {
+    "id": "grant_projectivy",
+    "group": "Remote & input",
+    "title": "Projectivy: take over the Home button",
+    "description": "Turns on Projectivy's accessibility service so the Home button opens Projectivy, even on Google TV and Fire TV, which ignore the normal launcher setting. Other accessibility apps stay on. Some TVs (Fire OS, TCL, Hisense) switch it off at every restart: if Home goes back to the stock screen, run this again. Shown only when Projectivy is installed.",
+    "requires": "com.spocky.projengmenu",
+    "check": "settings get secure enabled_accessibility_services | grep -q ProjectivyAccessibilityService && echo on",
+    "on": "on",
+    "apply": [
+      "pm grant com.spocky.projengmenu android.permission.WRITE_SECURE_SETTINGS >/dev/null 2>&1; true",
+      "c=com.spocky.projengmenu/com.spocky.projengmenu.services.ProjectivyAccessibilityService; s=$(settings get secure enabled_accessibility_services); case \"$s\" in *$c*) ;; ''|null) settings put secure enabled_accessibility_services $c ;; *) settings put secure enabled_accessibility_services \"$s:$c\" ;; esac",
+      "settings put secure accessibility_enabled 1",
+      "monkey -p com.spocky.projengmenu -c android.intent.category.LEANBACK_LAUNCHER 1 >/dev/null 2>&1; true"
+    ],
+    "undo": [
+      "pm revoke com.spocky.projengmenu android.permission.WRITE_SECURE_SETTINGS >/dev/null 2>&1; true",
+      "s=$(settings get secure enabled_accessibility_services | sed 's#:*com.spocky.projengmenu/[^:]*##; s#^:##'); if [ -z \"$s\" ] || [ \"$s\" = null ]; then settings delete secure enabled_accessibility_services; else settings put secure enabled_accessibility_services \"$s\"; fi"
+    ]
+  }
+]

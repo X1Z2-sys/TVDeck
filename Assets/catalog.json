@@ -1,0 +1,1078 @@
+[
+ {
+  "id": "jellyfin",
+  "name": "Jellyfin",
+  "category": "Media servers",
+  "package": "org.jellyfin.androidtv",
+  "description": "Official client for your own free Jellyfin media server.",
+  "source": {
+   "type": "github",
+   "repo": "jellyfin/jellyfin-androidtv",
+   "asset": "-release\\.apk$"
+  }
+ },
+ {
+  "id": "findroid",
+  "name": "Findroid",
+  "category": "Media servers",
+  "package": "dev.jdtech.jellyfin",
+  "description": "Fast third-party Jellyfin client with offline downloads.",
+  "source": {
+   "type": "github",
+   "repo": "jarnedemeulemeester/findroid",
+   "asset": "libre"
+  }
+ },
+ {
+  "id": "plex",
+  "name": "Plex",
+  "category": "Media servers",
+  "package": "com.plexapp.android",
+  "description": "Stream your Plex server's movies and shows.",
+  "source": {
+   "type": "playstore"
+  }
+ },
+ {
+  "id": "kodi",
+  "name": "Kodi",
+  "category": "Players",
+  "package": "org.xbmc.kodi",
+  "description": "The classic open-source media center for local and network files.",
+  "source": {
+   "type": "index",
+   "url": "https://mirrors.kodi.tv/releases/android/arm64-v8a/ https://mirrors.kodi.tv/releases/android/arm/"
+  }
+ },
+ {
+  "id": "vlc",
+  "name": "VLC",
+  "category": "Players",
+  "package": "org.videolan.vlc",
+  "description": "Plays nearly any video or audio file, including network shares.",
+  "source": {
+   "type": "fdroid",
+   "id": "org.videolan.vlc"
+  }
+ },
+ {
+  "id": "nova",
+  "name": "Nova Video Player",
+  "category": "Players",
+  "package": "org.courville.nova",
+  "description": "TV-friendly player for local, SMB, UPnP and NFS libraries with posters.",
+  "source": {
+   "type": "github",
+   "repo": "nova-video-player/aos-AVP",
+   "asset": "-release\\.apk$"
+  }
+ },
+ {
+  "id": "justplayer",
+  "name": "Just Player",
+  "category": "Players",
+  "package": "com.brouken.player",
+  "description": "Lightweight ExoPlayer-based player with great HDR and subtitle support.",
+  "source": {
+   "type": "github",
+   "repo": "moneytoo/Player",
+   "asset": "^Just\\.Player\\.v[\\d.]+\\.apk$"
+  }
+ },
+ {
+  "id": "mpv",
+  "name": "mpv",
+  "category": "Players",
+  "package": "is.xyz.mpv",
+  "description": "Power-user player with advanced codec and shader options.",
+  "source": {
+   "type": "github",
+   "repo": "mpv-android/mpv-android",
+   "asset": "^app-default-.*-release\\.apk$"
+  }
+ },
+ {
+  "id": "stremio",
+  "name": "Stremio",
+  "category": "Streaming",
+  "package": "com.stremio.one",
+  "description": "Media center that organises movies and shows from add-ons.",
+  "source": {
+   "type": "index",
+   "url": "https://www.stremio.com/downloads",
+   "asset": "^com\\.stremio\\.one-"
+  },
+  "gray": true
+ },
+ {
+  "id": "smarttube",
+  "name": "SmartTube",
+  "category": "Streaming",
+  "package": "org.smarttube.stable",
+  "description": "Ad-free YouTube for TV with SponsorBlock and 8K support.",
+  "source": {
+   "type": "github",
+   "repo": "yuliskov/SmartTube",
+   "asset": "^SmartTube_stable_"
+  },
+  "gray": true
+ },
+ {
+  "id": "libretube",
+  "name": "LibreTube",
+  "category": "Streaming",
+  "package": "com.github.libretube",
+  "description": "Private YouTube front-end through Piped (phone-style UI).",
+  "source": {
+   "type": "fdroid",
+   "id": "com.github.libretube"
+  },
+  "gray": true
+ },
+ {
+  "id": "newpipe",
+  "name": "NewPipe",
+  "category": "Streaming",
+  "package": "org.schabi.newpipe",
+  "description": "Lightweight YouTube client without Google services (phone-style UI). Phone layout; works with the remote.",
+  "source": {
+   "type": "fdroid",
+   "id": "org.schabi.newpipe"
+  },
+  "gray": true
+ },
+ {
+  "id": "tivimate",
+  "name": "TiviMate",
+  "category": "Live TV & IPTV",
+  "package": "ar.tvplayer.tv",
+  "description": "Polished IPTV player for your own M3U/Xtream playlists.",
+  "source": {
+   "type": "playstore"
+  }
+ },
+ {
+  "id": "projectivy",
+  "name": "Projectivy Launcher",
+  "category": "Launchers",
+  "package": "com.spocky.projengmenu",
+  "description": "Clean, ad-free, highly customizable home screen.",
+  "source": {
+   "type": "github",
+   "repo": "spocky/miproja1",
+   "asset": "\\.apk$"
+  }
+ },
+ {
+  "id": "flauncher",
+  "name": "FLauncher",
+  "category": "Launchers",
+  "package": "me.efesser.flauncher",
+  "description": "Simple open-source home screen without ads.",
+  "source": {
+   "type": "playstore"
+  }
+ },
+ {
+  "id": "aerialviews",
+  "name": "Aerial Views",
+  "category": "Screensavers",
+  "package": "com.neilturner.aerialviews",
+  "description": "Apple TV-style 4K aerial screensaver.",
+  "source": {
+   "type": "github",
+   "repo": "theothernt/AerialViews",
+   "asset": "\\.apk$"
+  }
+ },
+ {
+  "id": "adguard",
+  "name": "AdGuard for Android TV",
+  "category": "Ad-blocking",
+  "package": "com.adguard.android.tv",
+  "description": "System-wide ad and tracker blocking (paid features).",
+  "source": {
+   "type": "github",
+   "repo": "AdguardTeam/AdguardForAndroid",
+   "asset": "\\.TV\\.apk$"
+  }
+ },
+ {
+  "id": "moonlight",
+  "name": "Moonlight",
+  "category": "Game streaming",
+  "package": "com.limelight",
+  "description": "Stream PC games from Sunshine or NVIDIA GameStream.",
+  "source": {
+   "type": "github",
+   "repo": "moonlight-stream/moonlight-android",
+   "asset": "^app-nonRoot-release\\.apk$"
+  }
+ },
+ {
+  "id": "steamlink",
+  "name": "Steam Link",
+  "category": "Game streaming",
+  "package": "com.valvesoftware.steamlink",
+  "description": "Stream your Steam library from your PC.",
+  "source": {
+   "type": "playstore"
+  }
+ },
+ {
+  "id": "spotify",
+  "name": "Spotify",
+  "category": "Music",
+  "package": "com.spotify.tv.android",
+  "description": "Music and podcasts on the big screen.",
+  "source": {
+   "type": "playstore"
+  }
+ },
+ {
+  "id": "downloader",
+  "name": "Downloader",
+  "category": "Utilities",
+  "package": "com.esaba.downloader",
+  "description": "AFTVnews' browser and downloader: type a URL or short code with the remote to fetch and install APKs on the TV itself. Free, with ads.",
+  "source": {
+   "type": "playstore"
+  }
+ },
+ {
+  "id": "buttonmapper",
+  "name": "Button Mapper",
+  "category": "Utilities",
+  "package": "flar2.homebutton",
+  "description": "Remap remote buttons (e.g. long-press Home to open Jellyfin).",
+  "source": {
+   "type": "playstore"
+  }
+ },
+ {
+  "id": "sendfiles",
+  "name": "Send Files to TV",
+  "category": "Utilities",
+  "package": "com.yablio.sendfilestotv",
+  "description": "Send files from phone or PC to the TV over Wi-Fi.",
+  "source": {
+   "type": "playstore"
+  }
+ },
+ {
+  "id": "tvbro",
+  "name": "TV Bro",
+  "category": "Browsers",
+  "package": "com.phlox.tvwebbrowser",
+  "description": "Open-source browser built for the remote: tabs, bookmarks, voice search, downloads. No ads. This build adds Firefox's engine for sites the TV's old WebView can't render.",
+  "source": {
+   "type": "github",
+   "repo": "truefedex/tv-bro",
+   "asset": "geckoIncluded-.*\\.apk$"
+  }
+ },
+ {
+  "id": "puffintv",
+  "name": "Puffin TV",
+  "category": "Browsers",
+  "package": "com.cloudmosa.puffinTV",
+  "description": "Fast, remote-friendly browser that renders pages in the cloud. No ads; optional paid upgrade.",
+  "source": {
+   "type": "playstore"
+  }
+ },
+ {
+  "id": "browsehere",
+  "name": "BrowseHere",
+  "category": "Browsers",
+  "package": "com.tcl.browser",
+  "description": "TCL's TV browser with a remote-driven cursor. No ads.",
+  "source": {
+   "type": "playstore"
+  }
+ },
+ {
+  "id": "jiosphere",
+  "name": "JioSphere for TV",
+  "category": "Browsers",
+  "package": "com.jio.web.androidtv",
+  "description": "Free Chromium-based browser for TVs with remote navigation. No ads.",
+  "source": {
+   "type": "playstore"
+  }
+ },
+ {
+  "id": "protvbrowser",
+  "name": "Pro TV Web Browser",
+  "category": "Browsers",
+  "package": "com.tvwebbrowser.adblocktvbrowser",
+  "description": "Lightweight TV browser with a built-in ad blocker. No ads.",
+  "source": {
+   "type": "playstore"
+  }
+ },
+ {
+  "id": "vewd",
+  "name": "Vewd Browser",
+  "category": "Browsers",
+  "package": "com.vewd.core.browser",
+  "description": "Browser from the makers of many smart-TV web engines, designed for the remote. No ads.",
+  "source": {
+   "type": "playstore"
+  }
+ },
+ {
+  "id": "emby",
+  "name": "Emby",
+  "category": "Media servers",
+  "package": "tv.emby.embyatv",
+  "description": "Official client for your Emby media server.",
+  "source": {
+   "type": "playstore"
+  }
+ },
+ {
+  "id": "wholphin",
+  "name": "Wholphin",
+  "category": "Media servers",
+  "package": "com.github.damontecres.wholphin",
+  "description": "Open-source Jellyfin client with a Plex-style home screen.",
+  "source": {
+   "type": "github",
+   "repo": "damontecres/Wholphin",
+   "asset": "^Wholphin-(arm64-v8a|armeabi-v7a|x86_64)\\.apk$"
+  }
+ },
+ {
+  "id": "moonfin",
+  "name": "Moonfin",
+  "category": "Media servers",
+  "package": "org.moonfin.androidtv",
+  "description": "Polished open-source client for Jellyfin and Emby servers.",
+  "source": {
+   "type": "github",
+   "repo": "Moonfin-Client/Moonfin-Core",
+   "asset": "_AndroidTV_.*\\.apk$"
+  }
+ },
+ {
+  "id": "streamyfin",
+  "name": "Streamyfin",
+  "category": "Media servers",
+  "package": "com.fredrikburmester.streamyfin",
+  "description": "Modern open-source Jellyfin client.",
+  "source": {
+   "type": "github",
+   "repo": "Streamyfin/streamyfin",
+   "asset": "android-tv.*\\.apk$"
+  }
+ },
+ {
+  "id": "nextplayer",
+  "name": "Next Player",
+  "category": "Players",
+  "package": "dev.anilbeesetti.nextplayer",
+  "description": "Open-source video player with a clean interface. No ads.",
+  "source": {
+   "type": "github",
+   "repo": "anilbeesetti/nextplayer",
+   "asset": "-(arm64-v8a|armeabi-v7a|x86|x86_64)\\.apk$"
+  }
+ },
+ {
+  "id": "plexamp",
+  "name": "Plexamp",
+  "category": "Music",
+  "package": "tv.plex.labs.plexamp",
+  "description": "Plex's music player for your own music library.",
+  "source": {
+   "type": "playstore"
+  }
+ },
+ {
+  "id": "symfonium",
+  "name": "Symfonium",
+  "category": "Music",
+  "package": "app.symfonik.music.player",
+  "description": "Music player for Plex, Jellyfin, Emby, Subsonic and local files. Paid after trial.",
+  "source": {
+   "type": "playstore"
+  }
+ },
+ {
+  "id": "audiobookshelf",
+  "name": "Audiobookshelf",
+  "category": "Music",
+  "package": "com.audiobookshelf.app",
+  "description": "Client for a self-hosted audiobook and podcast server.",
+  "source": {
+   "type": "playstore"
+  }
+ },
+ {
+  "id": "pocketcasts",
+  "name": "Pocket Casts",
+  "category": "Music",
+  "package": "au.com.shiftyjelly.pocketcasts",
+  "description": "Podcast player with syncing across devices.",
+  "source": {
+   "type": "playstore"
+  }
+ },
+ {
+  "id": "antennapod",
+  "name": "AntennaPod",
+  "category": "Music",
+  "package": "de.danoeh.antennapod",
+  "description": "Open-source podcast player. No ads, no tracking.",
+  "source": {
+   "type": "fdroid",
+   "id": "de.danoeh.antennapod"
+  }
+ },
+ {
+  "id": "tubi",
+  "name": "Tubi",
+  "category": "Free streaming",
+  "package": "com.tubitv",
+  "description": "Free movies and TV shows, with ads. Legal, no account needed.",
+  "source": {
+   "type": "playstore"
+  }
+ },
+ {
+  "id": "plutotv",
+  "name": "Pluto TV",
+  "category": "Free streaming",
+  "package": "tv.pluto.android",
+  "description": "Hundreds of free live channels plus on-demand, with ads.",
+  "source": {
+   "type": "playstore"
+  }
+ },
+ {
+  "id": "kanopy",
+  "name": "Kanopy",
+  "category": "Free streaming",
+  "package": "com.kanopy",
+  "description": "Free films with a public library card.",
+  "source": {
+   "type": "playstore"
+  }
+ },
+ {
+  "id": "hdhomerun",
+  "name": "HDHomeRun",
+  "category": "Live TV & IPTV",
+  "package": "com.silicondust.view",
+  "description": "Watch over-the-air TV from an HDHomeRun network tuner.",
+  "source": {
+   "type": "playstore"
+  }
+ },
+ {
+  "id": "channels",
+  "name": "Channels",
+  "category": "Live TV & IPTV",
+  "package": "com.getchannels.app",
+  "description": "Live TV and DVR for HDHomeRun and Channels DVR server.",
+  "source": {
+   "type": "playstore"
+  }
+ },
+ {
+  "id": "sparkle",
+  "name": "Sparkle TV",
+  "category": "Live TV & IPTV",
+  "package": "se.hedekonsult.sparkle",
+  "description": "IPTV and DVR player that adds channels to the TV's built-in guide.",
+  "source": {
+   "type": "playstore"
+  }
+ },
+ {
+  "id": "ottnavigator",
+  "name": "OTT Navigator",
+  "category": "Live TV & IPTV",
+  "package": "com.ottnavigator.iptvnavigator",
+  "description": "IPTV player with guide and catch-up. Free with ads.",
+  "source": {
+   "type": "playstore"
+  },
+  "gray": true
+ },
+ {
+  "id": "televizo",
+  "name": "Televizo",
+  "category": "Live TV & IPTV",
+  "package": "com.ottplay.ottplay",
+  "description": "IPTV player for M3U and Xtream playlists. Free with ads.",
+  "source": {
+   "type": "playstore"
+  },
+  "gray": true
+ },
+ {
+  "id": "mrowser",
+  "name": "mrowser",
+  "category": "Browsers",
+  "package": "net.mrowser",
+  "description": "Open-source browser built for the D-pad remote, made for playing web video. No ads.",
+  "source": {
+   "type": "github",
+   "repo": "m-salehi-v/mrowser",
+   "asset": "\\.apk$"
+  }
+ },
+ {
+  "id": "dnsnet",
+  "name": "DNSNet",
+  "category": "Ad-blocking",
+  "package": "dev.clombardo.dnsnet",
+  "description": "FMHY pick. Open-source DNS ad blocker that runs as a local VPN, so it blocks ads in every app. No root.",
+  "source": {
+   "type": "github",
+   "repo": "t895/DNSNet",
+   "asset": "\\.apk$"
+  }
+ },
+ {
+  "id": "owntv",
+  "name": "OwnTV",
+  "category": "Live TV & IPTV",
+  "package": "tv.own.owntv",
+  "description": "FMHY pick. Open-source IPTV player made for Android TV: M3U and Xtream, guide, catch-up.",
+  "source": {
+   "type": "github",
+   "repo": "ahXN00/OwnTV",
+   "asset": "^OwnTV(-x86_64)?-v[\\d.]+\\.apk$"
+  }
+ },
+ {
+  "id": "lumora",
+  "name": "Lumora",
+  "category": "Live TV & IPTV",
+  "package": "com.lumora",
+  "description": "Fast, light IPTV and personal-media player for Android TV and Fire TV.",
+  "source": {
+   "type": "github",
+   "repo": "disclosurez/Lumora",
+   "asset": "\\.apk$"
+  }
+ },
+ {
+  "id": "m3uandroid",
+  "name": "M3U Android",
+  "category": "Live TV & IPTV",
+  "package": "com.m3u.smartphone",
+  "description": "FMHY pick. Open-source M3U playlist player with TV layout.",
+  "source": {
+   "type": "github",
+   "repo": "oxyroid/M3UAndroid",
+   "asset": "^[\\d.]+_(arm64-v8a|armeabi-v7a|x86|x86_64|universal)\\.apk$"
+  }
+ },
+ {
+  "id": "prysm",
+  "name": "Prysm",
+  "category": "Live TV & IPTV",
+  "package": "com.prysmplayer.app",
+  "description": "Modern open-source M3U IPTV player.",
+  "source": {
+   "type": "github",
+   "repo": "dereferencex/prysm",
+   "asset": "^prysm-[\\d.]+-(arm64-v8a|armeabi-v7a|universal)\\.apk$"
+  }
+ },
+ {
+  "id": "tizentube",
+  "name": "TizenTube Cobalt",
+  "category": "Streaming",
+  "package": "io.gh.reisxd.tizentube.cobalt",
+  "description": "FMHY pick. YouTube's official TV interface with ads and sponsor segments removed.",
+  "source": {
+   "type": "github",
+   "repo": "reisxd/TizenTubeCobalt",
+   "asset": "^cobalt-arm(64)?\\.apk$"
+  }
+ },
+ {
+  "id": "pipepipe",
+  "name": "PipePipe",
+  "category": "Streaming",
+  "package": "InfinityLoop1309.NewPipeEnhanced",
+  "description": "FMHY pick. Ad-free YouTube, PeerTube and BiliBili with SponsorBlock.",
+  "source": {
+   "type": "github",
+   "repo": "InfinityLoop1308/PipePipe",
+   "asset": "-(arm64-v8a|armeabi-v7a|x86|x86_64)-release\\.apk$"
+  }
+ },
+ {
+  "id": "s0undtv",
+  "name": "S0undTV",
+  "category": "Streaming",
+  "package": "com.s0und.s0undtv",
+  "description": "Ad-free Twitch player for TV with chat.",
+  "source": {
+   "type": "github",
+   "repo": "S0und/S0undTV",
+   "asset": "standalone\\.apk$"
+  }
+ },
+ {
+  "id": "smarttvkick",
+  "name": "SmartTVKick",
+  "category": "Streaming",
+  "package": "com.primeminister.kicktv",
+  "description": "Ad-free Kick streaming for Fire TV and Android TV.",
+  "source": {
+   "type": "github",
+   "repo": "CxWatcher/SmartTVKick",
+   "asset": "\\.apk$"
+  }
+ },
+ {
+  "id": "mpvnova",
+  "name": "mpvNova",
+  "category": "Players",
+  "package": "app.mpvnova.player",
+  "description": "mpv-based video player redesigned for the TV remote.",
+  "source": {
+   "type": "github",
+   "repo": "Laskco/mpvNova",
+   "asset": "^app-default-(arm64-v8a|armeabi-v7a|x86|x86_64)-release\\.apk$"
+  }
+ },
+ {
+  "id": "leanbackonfire",
+  "name": "Leanback on Fire",
+  "category": "Launchers",
+  "package": "com.amazon.tv.leanbacklauncher",
+  "description": "Stock Android TV home screen for Fire TV. No ads or sponsored rows.",
+  "source": {
+   "type": "github",
+   "repo": "tsynik/LeanbackLauncher",
+   "asset": "release\\.apk$"
+  }
+ },
+ {
+  "id": "flicky",
+  "name": "Flicky",
+  "category": "Utilities",
+  "package": "app.flicky",
+  "description": "F-Droid app store client built for TV remotes.",
+  "source": {
+   "type": "github",
+   "repo": "mlm-games/flicky",
+   "asset": "^flicky-[\\d.]+-(arm64-v8a|armeabi-v7a|x86|x86_64)\\.apk$"
+  }
+ },
+ {
+  "id": "nuvio",
+  "name": "Nuvio TV",
+  "category": "Streaming",
+  "package": "com.nuvio.tv",
+  "description": "FMHY top pick. Open-source movie and TV app built for the remote; uses Stremio add-ons and syncs with your Stremio account.",
+  "source": {
+   "type": "github",
+   "repo": "NuvioMedia/NuvioTV",
+   "asset": "^app-full-(arm64-v8a|armeabi-v7a|x86|x86_64)-release\\.apk$"
+  },
+  "gray": true
+ },
+ {
+  "id": "cloudstream",
+  "name": "CloudStream",
+  "category": "Streaming",
+  "package": "com.lagradost.cloudstream3",
+  "description": "FMHY top pick. Open-source movies, TV and anime app driven by community extensions. Has a TV layout.",
+  "source": {
+   "type": "github",
+   "repo": "recloudstream/cloudstream",
+   "asset": "^\\d[\\d.]*\\.apk$"
+  },
+  "gray": true
+ },
+ {
+  "id": "arvio",
+  "name": "ARVIO",
+  "category": "Streaming",
+  "package": "com.arvio.tv",
+  "description": "TV media center using Stremio add-ons, with IPTV support.",
+  "source": {
+   "type": "github",
+   "repo": "ProdigyV21/ARVIO",
+   "asset": "sideload-release\\.apk$"
+  },
+  "gray": true
+ },
+ {
+  "id": "zangetsu",
+  "name": "Zangetsu",
+  "category": "Streaming",
+  "package": "com.spyou.watch_app",
+  "description": "Movies, TV and anime, with a dedicated Android TV build.",
+  "source": {
+   "type": "github",
+   "repo": "Spyou/Zangetsu",
+   "asset": "-tv\\.apk$"
+  },
+  "gray": true
+ },
+ {
+  "id": "flixquest",
+  "name": "FlixQuest",
+  "category": "Streaming",
+  "package": "dev.beamlak.flixquest_v2",
+  "description": "Open-source movies, TV and live TV app.",
+  "source": {
+   "type": "github",
+   "repo": "BeamlakAschalew/flixquest",
+   "asset": "^flixquest-v[\\d.]+\\.apk$"
+  },
+  "gray": true
+ },
+ {
+  "id": "lumera",
+  "name": "Lumera",
+  "category": "Streaming",
+  "package": "com.lumera.app",
+  "description": "Stremio-add-on player for TV; imports your Stremio add-ons. Beta.",
+  "source": {
+   "type": "github",
+   "repo": "LumeraD3v/Lumera",
+   "asset": "\\.apk$"
+  },
+  "gray": true
+ },
+ {
+  "id": "anikku",
+  "name": "Anikku",
+  "category": "Streaming",
+  "package": "app.anikku",
+  "description": "FMHY top pick for anime. Open-source anime app with extensions.",
+  "source": {
+   "type": "github",
+   "repo": "komikku-app/anikku",
+   "asset": "^Anikku-(arm64-v8a|armeabi-v7a|x86|x86_64)-v[\\d.]+\\.apk$"
+  },
+  "gray": true
+ },
+ {
+  "id": "anymex",
+  "name": "AnymeX",
+  "category": "Streaming",
+  "package": "com.ryan.anymex",
+  "description": "Open-source anime and TV app with extensions and AniList sync.",
+  "source": {
+   "type": "github",
+   "repo": "RyanYuuki/AnymeX",
+   "asset": "^AnymeX-Android-(arm64-v8a|armeabi-v7a|x86_64)\\.apk$"
+  },
+  "gray": true
+ },
+ {
+  "id": "flixclusive",
+  "name": "Flixclusive",
+  "category": "Streaming",
+  "package": "com.flixclusive",
+  "description": "Open-source movies and TV app with provider plugins. Last release 2024.",
+  "source": {
+   "type": "github",
+   "repo": "flixclusiveorg/Flixclusive",
+   "asset": "release\\.apk$"
+  },
+  "gray": true
+ },
+ {
+  "id": "digilogtv",
+  "name": "DigilogTV",
+  "category": "Live TV & IPTV",
+  "package": "io.github.aldrinzigmundv.digilogtv",
+  "description": "Free live news channels from around the world. Open source.",
+  "source": {
+   "type": "github",
+   "repo": "aldrinzigmundv/digilogtv",
+   "asset": "\\.apk$"
+  }
+ },
+ {
+  "id": "playtorrio",
+  "name": "PlayTorrio",
+  "category": "Streaming",
+  "package": "com.example.playtorrio",
+  "description": "FMHY top pick. Movies, TV and anime. Phone layout; works with the remote.",
+  "source": {
+   "type": "github",
+   "repo": "ayman708-UX/PlayTorrioV3",
+   "asset": "^app-(arm64-v8a|armeabi-v7a)-release\\.apk$"
+  },
+  "gray": true
+ },
+ {
+  "id": "vega",
+  "name": "Vega",
+  "category": "Streaming",
+  "package": "com.vega",
+  "description": "Movies and TV app with provider plugins. Phone layout; works with the remote.",
+  "source": {
+   "type": "github",
+   "repo": "Zenda-Cross/vega-app",
+   "asset": "^Vega-(arm64-v8a|armeabi-v7a)-v[\\d.]+\\.apk$"
+  },
+  "gray": true
+ },
+ {
+  "id": "animiru",
+  "name": "Animiru",
+  "category": "Streaming",
+  "package": "xyz.Quickdev.Animiru.mi",
+  "description": "Open-source anime app with extensions. Phone layout; works with the remote.",
+  "source": {
+   "type": "github",
+   "repo": "Quickdesh/Animiru",
+   "asset": "^Animiru-(arm64-v8a|armeabi-v7a|x86|x86_64)-v[\\d.]+\\.apk$"
+  },
+  "gray": true
+ },
+ {
+  "id": "fluxtube",
+  "name": "FluxTube",
+  "category": "Streaming",
+  "package": "com.fazilvk.fluxtube",
+  "description": "FMHY pick. Ad-free YouTube. Phone layout; works with the remote.",
+  "source": {
+   "type": "github",
+   "repo": "mu-fazil-vk/FluxTube",
+   "asset": "^app-(arm64-v8a|armeabi-v7a|x86_64)-release\\.apk$"
+  }
+ },
+ {
+  "id": "flow",
+  "name": "Flow",
+  "category": "Streaming",
+  "package": "io.github.aedev.flow",
+  "description": "FMHY pick. Ad-free YouTube with SponsorBlock. Has a TV home-screen icon.",
+  "source": {
+   "type": "github",
+   "repo": "A-EDev/Flow",
+   "asset": "^flow-foss-(arm64-v8a|armeabi-v7a)\\.apk$"
+  }
+ },
+ {
+  "id": "mpvex",
+  "name": "mpvEx",
+  "category": "Players",
+  "package": "app.marlboroadvance.mpvex",
+  "description": "FMHY top pick. Open-source mpv video player. Phone layout; works with the remote.",
+  "source": {
+   "type": "github",
+   "repo": "marlboro-advance/mpvEx",
+   "asset": "^mpvEx-(arm64-v8a|armeabi-v7a|x86|x86_64)-v[\\d.]+\\.apk$"
+  }
+ },
+ {
+  "id": "rexplayer",
+  "name": "REX Player",
+  "category": "Players",
+  "package": "xyz.mpv.rex",
+  "description": "Open-source mpv-based video player. Phone layout; works with the remote.",
+  "source": {
+   "type": "github",
+   "repo": "mpvRex/REX-Player",
+   "asset": "^REX-Player-(arm64-v8a|armeabi-v7a|x86|x86_64)-v[\\d.]+\\.apk$"
+  }
+ },
+ {
+  "id": "tiwee",
+  "name": "Tiwee",
+  "category": "Live TV & IPTV",
+  "package": "com.tiwee.media",
+  "description": "FMHY pick. Open-source IPTV player. Phone layout; works with the remote.",
+  "source": {
+   "type": "github",
+   "repo": "neffex97/Tiwee",
+   "asset": "^app-(arm64-v8a|armeabi-v7a|x86_64)-release\\.apk$"
+  },
+  "gray": true
+ },
+ {
+  "id": "freetv",
+  "name": "FreeTV",
+  "category": "Live TV & IPTV",
+  "package": "com.phstudio.freetv",
+  "description": "FMHY pick. Free live TV channels. Phone layout; works with the remote.",
+  "source": {
+   "type": "github",
+   "repo": "phstudio2/FreeTV",
+   "asset": "\\.apk$"
+  },
+  "gray": true
+ },
+ {
+  "id": "xplayer",
+  "name": "XPlayer",
+  "category": "Live TV & IPTV",
+  "package": "com.tntlikely.xplayer",
+  "description": "Open-source IPTV / M3U player. Phone layout; works with the remote.",
+  "source": {
+   "type": "github",
+   "repo": "TNT-Likely/xplayer",
+   "asset": "^xplayer-[\\d.]+-(armeabi-v7a|x86_64|universal)\\.apk$"
+  },
+  "gray": true
+ },
+ {
+  "id": "rethinkdns",
+  "name": "Rethink DNS",
+  "category": "Ad-blocking",
+  "package": "com.celzero.bravedns",
+  "description": "FMHY top pick. Open-source DNS ad blocker and firewall that runs as a local VPN. No root. Phone layout; works with the remote.",
+  "source": {
+   "type": "github",
+   "repo": "celzero/rethink-app",
+   "asset": "^rethink-\\d+-(arm64-v8a|armeabi-v7a|x86|x86_64)\\.apk$"
+  }
+ },
+ {
+  "id": "adaway",
+  "name": "AdAway",
+  "category": "Ad-blocking",
+  "package": "org.adaway",
+  "description": "FMHY pick. Open-source hosts-based ad blocker; use its VPN mode (no root). Phone layout; works with the remote.",
+  "source": {
+   "type": "github",
+   "repo": "AdAway/AdAway",
+   "asset": "^AdAway-.*\\.apk$"
+  }
+ },
+ {
+  "id": "netguard",
+  "name": "NetGuard",
+  "category": "Ad-blocking",
+  "package": "eu.faircode.netguard",
+  "description": "Open-source per-app firewall; can block apps from going online. No root. Phone layout; works with the remote.",
+  "source": {
+   "type": "github",
+   "repo": "M66B/NetGuard",
+   "asset": "release\\.apk$"
+  }
+ },
+ {
+  "id": "couchylauncher",
+  "name": "Couchy Launcher",
+  "category": "Launchers",
+  "package": "com.conreo.couchytv",
+  "description": "Fast, lightweight open-source single-screen home launcher for Android TV with zero ads, D-pad navigation, and low RAM usage.",
+  "source": {
+   "type": "github",
+   "repo": "conreo/couchy-launcher",
+   "asset": "Couchy-Launcher.*\\.apk$"
+  }
+ },
+ {
+  "id": "monetlauncher",
+  "name": "Monet Launcher",
+  "category": "Launchers",
+  "package": "com.klevico.monet",
+  "description": "Android TV launcher with dynamic Material You colors extracted from your wallpaper, home widgets, and folder support.",
+  "source": {
+   "type": "github",
+   "repo": "Klevico/Monet-Launcher",
+   "asset": "monet.*\\.apk$"
+  }
+ },
+ {
+  "id": "barelauncher",
+  "name": "BareLauncher",
+  "category": "Launchers",
+  "package": "com.bare.launcher",
+  "description": "Minimalist ultra-low RAM launcher (0.1 MB) for 1GB/2GB RAM Android TV boxes.",
+  "source": {
+   "type": "github",
+   "repo": "f102mithunysypdlcjr-pixel/BareLauncherv3",
+   "asset": "BareLauncher\\.apk$"
+  }
+ },
+ {
+  "id": "adbautoenable",
+  "name": "ADB Auto-Enable",
+  "category": "Utilities",
+  "package": "com.tpn.adbautoenable",
+  "description": "Keeps wireless ADB debugging active on port 5555 across reboots and sleep on Android 14+ (Chromecast w/ Google TV, Google TV Streamer).",
+  "source": {
+   "type": "github",
+   "repo": "mouldybread/adb-auto-enable",
+   "asset": "ADB-auto-enable.*\\.apk$"
+  }
+ },
+ {
+  "id": "atvbluetooth",
+  "name": "Android TV Bluetooth",
+  "category": "Utilities",
+  "package": "com.saihgupr.btcontrol",
+  "description": "1-click Bluetooth utility for connecting/disconnecting specific Bluetooth headphones and game controllers.",
+  "source": {
+   "type": "github",
+   "repo": "saihgupr/AndroidTVBluetooth",
+   "asset": "AndroidTVBluetooth\\.apk$"
+  }
+ },
+ {
+  "id": "chillhub",
+  "name": "ChillHub",
+  "category": "Launchers",
+  "package": "app.lumoslabs.chillhub",
+  "description": "Ad-free launcher with a Continue Watching shelf, app dock and 11 background themes. Works on Android TV and Fire TV.",
+  "source": {
+   "type": "github",
+   "repo": "AppleChillVibez/ChillHub",
+   "asset": "chillhub\\.apk$"
+  }
+ },
+ {
+  "id": "at4k",
+  "name": "AT4K Launcher",
+  "category": "Launchers",
+  "package": "com.overdevs.at4k",
+  "description": "Clean launcher with video wallpapers, icon packs and settings backup.",
+  "source": {
+   "type": "github",
+   "repo": "avadhesh18/at4k",
+   "asset": "\\.apk$"
+  }
+ },
+ {
+  "id": "atv-launcher",
+  "name": "ATV Launcher Pro",
+  "category": "Launchers",
+  "package": "ca.dstudio.atvlauncher.pro",
+  "description": "Fast, customizable home screen: row styles, icon packs, folders, widgets and video wallpapers.",
+  "source": {
+   "type": "playstore"
+  }
+ },
+ {
+  "id": "webviewkiosk",
+  "name": "Webview Kiosk",
+  "category": "Utilities",
+  "package": "uk.nktnet.webviewkiosk",
+  "description": "Locks the TV to one web page — Home Assistant dashboards, family calendars, digital signs. PIN-protected. Phone layout; works with the remote.",
+  "source": {
+   "type": "github",
+   "repo": "nktnet1/webview-kiosk",
+   "asset": "WebviewKiosk_v.*\\.apk$"
+  }
+ },
+ {
+  "id": "ufmpro",
+  "name": "Ultimate File Manager Pro",
+  "category": "Utilities",
+  "package": "za.kilowatch.ultimatefilemanager",
+  "description": "File manager with a TV edition: SMB/FTP/cloud shares, and drag-and-drop APK installs from any PC browser (PIN-protected).",
+  "source": {
+   "type": "playstore"
+  }
+ }
+]

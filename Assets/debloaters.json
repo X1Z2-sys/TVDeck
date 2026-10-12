@@ -1,0 +1,435 @@
+[
+  {
+    "id": "tv-tweak-fire",
+    "name": "TV Tweak — Fire TV (26zl)",
+    "author": "26zl",
+    "repo": "26zl/tv-tweak",
+    "platforms": [
+      "firetv"
+    ],
+    "desc": "Tiered package list from a Fire TV Stick 4K Max (Fire OS 8.1.8). Disables ACR, ads, promos and telemetry. On Fire TV Edition TVs some of the stick's 'cruft' runs Settings, voice and inputs, so those sit in an optional group.",
+    "groups": {
+      "Ads & telemetry": [
+        "com.amazon.tv.acr",
+        "com.amazon.hybridadidservice",
+        "com.amazon.device.telemetry.emitter",
+        "com.amazon.wirelessmetrics.service",
+        "com.amazon.perfc",
+        "com.amazon.perfcollection",
+        "com.amazon.dp.logger"
+      ],
+      "Ads & promos on home": [
+        "com.amazon.tv.ftvambient",
+        "com.amazon.ftv.screensaver",
+        "com.amazon.sneakpeek",
+        "com.amazon.shoptv.client",
+        "com.amazon.shoptv.firetv.client",
+        "com.amazon.minitv.android.app",
+        "com.amazon.gamehub",
+        "com.amazon.tv.website_launcher",
+        "com.amazon.bueller.music",
+        "com.amazon.bueller.photos"
+      ],
+      "Cruft (tutorials, notices)": [
+        "com.amazon.storm.lightning.tutorial",
+        "com.amazon.tmm.tutorial",
+        "com.amazon.tv.releasenotes",
+        "com.amazon.firetv.troubleshooting",
+        "com.amazon.tv.support",
+        "com.amazon.tahoe",
+        "com.amazon.tv.legal.notices",
+        "com.amazon.ods.kindleconnect"
+      ]
+    },
+    "optin": {
+      "System helpers (can break Settings, voice, HDMI inputs and app pickers)": [
+        "com.amazon.aca",
+        "com.amazon.media.recommendations",
+        "com.amazon.tv.livetv",
+        "com.amazon.tv.notificationcenter",
+        "com.amazon.uxnotification",
+        "com.amazon.systemnotices",
+        "com.amazon.audiohome",
+        "com.amazon.dummy.alarmclock",
+        "com.amazon.dummy.calendar",
+        "com.amazon.dummy.contacts",
+        "com.amazon.dummy.gallery",
+        "com.amazon.dummy.music",
+        "com.amazon.dummy.settings",
+        "com.amazon.dummy.soundpicker"
+      ],
+      "Alexa (voice remote stops working)": [
+        "com.amazon.alexa.datastore.app",
+        "com.amazon.alexamediaplayer.runtime.ftv",
+        "com.amazon.alexadirectivebrokerservice",
+        "com.amazon.alexa.externalmediaplayer.fireos",
+        "com.amazon.tv.alexaalerts",
+        "com.amazon.tv.alexanotifications"
+      ],
+      "Smart Home (Matter, Whisper)": [
+        "com.amazon.tv.matter",
+        "com.amazon.tv.mattercohost",
+        "com.amazon.smarthomemapviewapp",
+        "com.amazon.whad",
+        "com.amazon.whasettings",
+        "com.amazon.whisperjoin.middleware.v2.np",
+        "com.amazon.tv.ffsprovisioneeclient"
+      ]
+    },
+    "notes": [
+      "com.amazon.device.software.ota is a protected package on Fire OS 8 - it refuses pm disable for the shell UID; block at DNS/router instead.",
+      "On an Insignia Fire TV Edition TV, disabling the old default list broke the sidebar Settings tab and voice settings; the System helpers group holds the likely causes. Restore it if either stops working."
+    ]
+  },
+  {
+    "id": "tv-tweak-googletv",
+    "name": "TV Tweak — Sharp Google TV (26zl)",
+    "author": "26zl",
+    "repo": "26zl/tv-tweak",
+    "platforms": [
+      "googletv"
+    ],
+    "desc": "Package tiers from a Sharp 4K UHDTV (MediaTek MT9676) running Google TV / Android 14. ACR, ad services, promos. Keep-list protects DRM, tuners, streaming apps.",
+    "groups": {
+      "Ads & telemetry": [
+        "tv.anoki.acr.anokiacroptin",
+        "com.mtc.uploadcsr",
+        "com.google.android.feedback",
+        "com.android.adservices.api",
+        "com.android.ondevicepersonalization.services",
+        "com.android.federatedcompute.services",
+        "com.android.tv.feedbackconsent",
+        "com.google.android.partnersetup"
+      ],
+      "Store surfaces": [
+        "com.amazon.amazonvideo.livingroom",
+        "com.google.android.play.games",
+        "com.google.android.youtube.tvmusic",
+        "com.mediatek.tv.retaildemo"
+      ],
+      "Cruft": [
+        "com.mtc.emanual",
+        "org.obs.mhegservice"
+      ],
+      "OTA (vendor; Play updates unaffected)": [
+        "com.mediatek.tv.systemupdater",
+        "com.android.dynsystem"
+      ]
+    },
+    "optin": {
+      "Assistant (voice stops)": [
+        "com.google.android.katniss"
+      ],
+      "Cast (phones can't cast)": [
+        "com.google.android.apps.mediashell",
+        "com.mediatek.dialservice",
+        "com.mediatek.miracast"
+      ]
+    }
+  },
+  {
+    "id": "shield-debloat",
+    "name": "SHIELD Debloat (crucifix86)",
+    "author": "crucifix86",
+    "repo": "crucifix86/shield-debloat",
+    "platforms": [
+      "shield"
+    ],
+    "desc": "Tested on NVIDIA SHIELD 2019 cylinder. pm uninstall -k --user 0 = reversible; restore with install-existing.",
+    "groups": {
+      "NVIDIA telemetry": [
+        "com.nvidia.stats",
+        "com.nvidia.feedback",
+        "com.nvidia.shieldbeta",
+        "com.nvidia.diagtools",
+        "com.nvidia.tegraprofiler.security",
+        "com.nvidia.factory",
+        "com.nvidia.factorybundling",
+        "com.nvidia.factorysyschecker"
+      ],
+      "NVIDIA cruft": [
+        "com.nvidia.tegrazone3",
+        "com.nvidia.hotwordsetup",
+        "com.nvidia.shield.ask",
+        "com.nvidia.shield.registration",
+        "com.nvidia.shield.welcome",
+        "com.nvidia.shield.nas",
+        "com.nvidia.shield.smbserver",
+        "com.nvidia.shield.smbauth",
+        "com.nvidia.remotelocator",
+        "com.nvidia.developerwidget",
+        "com.nvidia.irtuner"
+      ],
+      "Google bloat": [
+        "com.google.android.tvrecommendations",
+        "com.google.android.backdrop",
+        "com.google.android.speech.pumpkin",
+        "com.google.android.feedback",
+        "com.google.android.partnersetup",
+        "com.google.android.onetimeinitializer",
+        "com.google.android.syncadapters.calendar",
+        "com.google.android.apps.nbu.smartconnect.tv",
+        "com.android.hotwordenrollment.okgoogle",
+        "com.android.hotwordenrollment.xgoogle"
+      ],
+      "Android system cruft": [
+        "com.android.printspooler",
+        "com.android.dreams.basic",
+        "com.android.wallpaperbackup",
+        "com.android.bluetoothmidiservice",
+        "com.android.mtp",
+        "com.android.vpndialogs",
+        "com.android.dynsystem",
+        "com.android.providers.calendar",
+        "com.android.providers.contacts",
+        "com.android.htmlviewer",
+        "com.android.statementservice",
+        "com.android.sharedstoragebackup",
+        "com.android.backupconfirm",
+        "com.android.localtransport",
+        "com.android.gallery3d"
+      ]
+    },
+    "optin": {
+      "Memory hogs with real trade-offs": [
+        "com.google.android.katniss",
+        "com.google.android.apps.mediashell",
+        "com.google.android.inputmethod.latin"
+      ]
+    }
+  },
+  {
+    "id": "tcl-safe",
+    "name": "TCL Debloat safe (seun-novodev)",
+    "author": "seun-novodev",
+    "repo": "seun-novodev/android-tv-debloat-toolkit",
+    "platforms": [
+      "googletv"
+    ],
+    "desc": "TCL-only curated safe list (TCL browser/store/cast/gallery/screensaver ads) plus Google TV Recommendations - the project's 'safe' tier.",
+    "groups": {
+      "TCL bloat": [
+        "com.tcl.browser",
+        "com.tcl.tv.appstore",
+        "com.tcl.tv.cast",
+        "com.tcl.usercenter",
+        "com.tcl.tclaccount",
+        "com.tcl.tv.tcloudaccount",
+        "com.tcl.gallery",
+        "com.tcl.mediacenter",
+        "com.tcl.screenadservice",
+        "com.tcl.screensaver",
+        "com.tcl.eula"
+      ],
+      "Google TV": [
+        "com.google.android.tvrecommendations"
+      ]
+    },
+    "optin": {},
+    "brands": [
+      "tcl",
+      "iffalcon"
+    ]
+  },
+  {
+    "id": "firestrip",
+    "name": "firestrip (WB2024)",
+    "author": "WB2024",
+    "repo": "WB2024/firestrip",
+    "platforms": [
+      "firetv"
+    ],
+    "desc": "The best-known dedicated Fire TV debloater (TUI, MIT). One-person maintained; Open its page in a browser to review and use, since it's an app rather than a package list - TVDeck doesn't shell out to unknown binaries.",
+    "groups": {},
+    "optin": {}
+  },
+  {
+    "id": "sony-bravia",
+    "name": "Sony Bravia (supermarsx)",
+    "author": "supermarsx",
+    "repo": "supermarsx/sony-bravia-adb-scripts",
+    "platforms": [
+      "googletv"
+    ],
+    "brands": [
+      "sony"
+    ],
+    "desc": "The script's own recommended Sony preset (40 packages, disable-only). Removes Sony Select/Shelf ad rows and the Samba TV viewing tracker.",
+    "groups": {
+      "Ads & recommendation rows": [
+        "com.sony.dtv.sonyselect",
+        "com.sony.dtv.sonyshelf",
+        "com.sony.dtv.recommendationservice",
+        "com.sony.dtv.watchtvrecommendation",
+        "com.sony.dtv.woprecommendation",
+        "com.sony.dtv.irbrecommendation",
+        "com.sony.dtv.networkrecommendation",
+        "com.sony.dtv.bravialifehack"
+      ],
+      "Samba TV viewing tracker": [
+        "tv.samba.ssm"
+      ],
+      "Hotel & store demo modes": [
+        "com.sony.dtv.b2b.hotellanguage",
+        "com.sony.dtv.b2b.hotellanguange",
+        "com.sony.dtv.b2b.hotelmenu",
+        "com.sony.dtv.b2b.hotelmode",
+        "com.sony.dtv.shopsettings"
+      ],
+      "Preinstalled extras": [
+        "com.sony.dtv.imanual",
+        "com.sony.dtv.osat.album",
+        "com.sony.dtv.photosharingplus",
+        "com.gameloft.android.HEP.GloftANHP",
+        "com.opera.sdk.example",
+        "com.qterics.da.product",
+        "com.google.android.inputmethod.japanese",
+        "com.google.android.play.games",
+        "com.sony.snei.video.hhvu"
+      ]
+    },
+    "optin": {
+      "Program-guide search (TV tuner users keep this)": [
+        "com.sony.dtv.tvx",
+        "com.sony.dtv.tvx.search.s101.tvprograms.cam",
+        "com.sony.dtv.tvx.search.s101.tvprograms.digital",
+        "com.sony.dtv.tvx.search.s101.tvprograms.vt",
+        "com.sony.dtv.tvx.search.s201.netepg",
+        "com.sony.dtv.tvx.search.s301.rec",
+        "com.sony.dtv.tvx.search.s501.psv"
+      ],
+      "Interactive broadcast (red button / HbbTV)": [
+        "com.sony.dtv.interactivetvplatform",
+        "com.sony.dtv.interactivetvutil",
+        "com.sony.dtv.interactivetvutil.output",
+        "com.sony.dtv.interactivetvutil.ppbridge",
+        "com.sony.dtv.youview"
+      ],
+      "Casting & media sharing (DLNA, Wi-Fi Direct, phone pairing)": [
+        "com.sonyericsson.dlna",
+        "com.sonyericsson.dlna.dtcpplayer",
+        "com.sony.dtv.networkapp.wifidirect",
+        "com.sony.dtv.bleadvertiseservice"
+      ],
+      "Netflix button manager": [
+        "com.sony.dtv.netflixmanager"
+      ]
+    }
+  },
+  {
+    "id": "tcl-googletv",
+    "name": "TCL Google TV (livvaa)",
+    "author": "livvaa",
+    "repo": "livvaa/TCL-Google-TV-Debloat-Optimizer",
+    "platforms": [
+      "googletv"
+    ],
+    "brands": [
+      "tcl",
+      "iffalcon"
+    ],
+    "desc": "TCL ad, telemetry and Samba TV packages from livvaa's optimizer. The original script uninstalls; TVDeck only disables, so everything can be restored.",
+    "groups": {
+      "TCL ads, telemetry & Samba TV": [
+        "com.tcl.ttvs",
+        "com.tcl.interactive",
+        "tv.samba.ssm.ui",
+        "com.tcl.waterfall.overseas",
+        "com.tcl.partnercustomizer",
+        "com.tcl.useragreement",
+        "com.tcl.logkit",
+        "com.tcl.guard",
+        "com.tcl.exhibit",
+        "com.tcl.messagebox",
+        "com.tcl.dashboard",
+        "com.tcl.tv.tclhome_passive"
+      ]
+    },
+    "optin": {
+      "TCL extras (Alexa, MagiConnect, media center, channel apps)": [
+        "com.tcl.channelplus",
+        "com.tcl.magiconnectfree",
+        "com.tcl.smartalexa",
+        "com.tcl.esticker",
+        "com.tcl.hearaid",
+        "com.tcl.repairguide",
+        "com.tcl.ocean.instructions",
+        "com.tcl.t_solo",
+        "com.tcl.suspension",
+        "com.tcl.ui_mediaCenter"
+      ]
+    },
+    "notes": [
+      "Disabling com.tcl.guard (Safety Guard) also stops it switching off launchers' accessibility services after reboot."
+    ]
+  },
+  {
+    "id": "xiaomi-mitv",
+    "name": "Xiaomi Mi TV / Mi Box (spocky)",
+    "author": "spocky",
+    "repo": "spocky/miproja1",
+    "platforms": [
+      "googletv"
+    ],
+    "brands": [
+      "xiaomi",
+      "redmi"
+    ],
+    "desc": "From the Projectivy installer's Mi TV list. Most packages exist only on PatchWall (China/India) firmware; global Mi Box S has few of them.",
+    "groups": {
+      "Ads & tracking": [
+        "com.xiaomi.mitv.advertise",
+        "com.miui.systemAdSolution",
+        "com.miui.tv.analytics",
+        "com.xiaomi.statistic",
+        "com.xiaomi.devicereport",
+        "com.xiaomi.mitv.tvpush.tvpushservice"
+      ],
+      "Unused Mi apps": [
+        "com.duokan.videodaily",
+        "com.xiaomi.mitv.handbook",
+        "com.xiaomi.mitv.calendar",
+        "com.xiaomi.tweather",
+        "com.xiaomi.mitv.shop",
+        "com.xiaomi.mitv.shop.mihome",
+        "com.xiaomi.mitv.shop.tvshop",
+        "com.mitv.gallery",
+        "com.xiaomi.tv.gallery",
+        "com.xiaomi.mitv.karaoke.service",
+        "com.xiaomi.mibox.gamecenter",
+        "com.xiaomi.gamecenter.sdk.service.mibox",
+        "com.xiaomi.mimusic2",
+        "com.xm.webcontent",
+        "com.mitv.care"
+      ]
+    },
+    "optin": {
+      "Mi store, payments & updates": [
+        "com.xiaomi.tv.appupgrade",
+        "com.xiaomi.mitv.searchcenter",
+        "com.mitv.appstore.component.land",
+        "com.xiaomi.mitv.appstore",
+        "com.xiaomi.mitv.payment",
+        "com.xiaomi.mitv.pay",
+        "com.mipay.wallet.tv"
+      ],
+      "Mi account, voice & screensaver": [
+        "com.xiaomi.account.auth",
+        "com.xiaomi.account",
+        "com.xiaomi.voicecontrol",
+        "com.mitv.screensaver",
+        "com.mi.umi",
+        "com.mi.umifrontend",
+        "com.xiaomi.screenrecorder"
+      ],
+      "Chinese keyboards (switch keyboard first!)": [
+        "com.sohu.inputmethod.sogou.tv",
+        "com.sogou.speech.offlineservice",
+        "com.baidu.input"
+      ]
+    },
+    "notes": [
+      "Switch to another keyboard before disabling the Chinese keyboards, or you can't type."
+    ]
+  }
+]

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Page
+    x:Class="TVDeck.Pages.SettingsPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <ScrollViewer>
+        <StackPanel Padding="36,24,36,36" Spacing="16" MaxWidth="820" HorizontalAlignment="Left">
+            <TextBlock Style="{StaticResource TitleTextBlockStyle}" Text="Settings" />
+            <Border Style="{StaticResource Card}" Padding="20">
+                <StackPanel Spacing="8">
+                    <TextBlock Style="{StaticResource BodyStrongTextBlockStyle}" Text="App theme" />
+                    <TextBlock Style="{StaticResource SecondaryCaption}"
+                               Text="Use system setting switches TVDeck between light and dark whenever Windows does. OLED black is dark mode on pure black, so an OLED screen switches those pixels off." />
+                    <RadioButtons x:Name="Theme" AutomationProperties.Name="App theme" SelectionChanged="Theme_SelectionChanged">
+                        <RadioButton Content="Use system setting" />
+                        <RadioButton Content="Light" />
+                        <RadioButton Content="Dark" />
+                        <RadioButton Content="OLED black" />
+                    </RadioButtons>
+                </StackPanel>
+            </Border>
+        </StackPanel>
+    </ScrollViewer>
+</Page>

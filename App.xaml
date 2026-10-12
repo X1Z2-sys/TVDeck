@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Application
+    x:Class="TVDeck.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:TVDeck">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <XamlControlsResources xmlns="using:Microsoft.UI.Xaml.Controls" />
+            </ResourceDictionary.MergedDictionaries>
+
+            <!-- Rounder than Fluent's 4/8 defaults: every built-in control and dialog picks these up. -->
+            <CornerRadius x:Key="ControlCornerRadius">6</CornerRadius>
+            <CornerRadius x:Key="OverlayCornerRadius">12</CornerRadius>
+
+            <!--
+              Shared looks. Brushes live in style setters as ThemeResource so they follow the element's
+              actual theme (system, or the Light/Dark override in Settings) and update live —
+              brushes fetched in C# from Application.Resources would stay on the app-level theme.
+            -->
+            <Style x:Key="Card" TargetType="Border">
+                <Setter Property="Padding" Value="16,12" />
+                <Setter Property="CornerRadius" Value="{StaticResource OverlayCornerRadius}" />
+                <Setter Property="BorderThickness" Value="1" />
+                <Setter Property="Background" Value="{ThemeResource CardBackgroundFillColorDefaultBrush}" />
+                <Setter Property="BorderBrush" Value="{ThemeResource CardStrokeColorDefaultBrush}" />
+            </Style>
+            <Style x:Key="SecondaryCaption" TargetType="TextBlock" BasedOn="{StaticResource CaptionTextBlockStyle}">
+                <Setter Property="Foreground" Value="{ThemeResource TextFillColorSecondaryBrush}" />
+                <Setter Property="TextWrapping" Value="Wrap" />
+            </Style>
+            <Style x:Key="AccentBadge" TargetType="Border">
+                <Setter Property="Padding" Value="6,1,6,2" />
+                <Setter Property="CornerRadius" Value="{StaticResource ControlCornerRadius}" />
+                <Setter Property="Background" Value="{ThemeResource AccentFillColorDefaultBrush}" />
+            </Style>
+            <Style x:Key="AccentBadgeText" TargetType="TextBlock">
+                <Setter Property="FontSize" Value="11" />
+                <Setter Property="Foreground" Value="{ThemeResource TextOnAccentFillColorPrimaryBrush}" />
+            </Style>
+            <Style x:Key="SuccessChip" TargetType="Border">
+                <Setter Property="Padding" Value="8,1,8,2" />
+                <Setter Property="CornerRadius" Value="10" />
+                <Setter Property="Background" Value="{ThemeResource SystemFillColorSuccessBackgroundBrush}" />
+            </Style>
+            <Style x:Key="CautionChip" TargetType="Border" BasedOn="{StaticResource SuccessChip}">
+                <Setter Property="Background" Value="{ThemeResource SystemFillColorCautionBackgroundBrush}" />
+            </Style>
+            <Style x:Key="ChipText" TargetType="TextBlock">
+                <Setter Property="FontSize" Value="11" />
+                <Setter Property="Foreground" Value="{ThemeResource TextFillColorPrimaryBrush}" />
+            </Style>
+            <Style x:Key="StatusDotOn" TargetType="Ellipse">
+                <Setter Property="Fill" Value="{ThemeResource SystemFillColorSuccessBrush}" />
+            </Style>
+            <Style x:Key="StatusDotOff" TargetType="Ellipse">
+                <Setter Property="Fill" Value="{ThemeResource SystemFillColorCriticalBrush}" />
+            </Style>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

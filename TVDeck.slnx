@@ -1,0 +1,6 @@
+<Solution>
+  <Folder Name="/tests/">
+    <Project Path="tests/TVDeck.Tests/TVDeck.Tests.csproj" />
+  </Folder>
+  <Project Path="TVDeck.csproj" />
+</Solution>

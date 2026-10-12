@@ -1,0 +1,367 @@
+[
+ {
+  "match": "AFTHY7ABBA",
+  "field": "model",
+  "name": "Insignia Fire TV Edition smart TV"
+ },
+ {
+  "match": "AFTBOE497A",
+  "field": "model",
+  "name": "Amazon Ember Artline (2026)"
+ },
+ {
+  "match": "AFTBOEF7DA",
+  "field": "model",
+  "name": "Amazon Ember Artline (2026)"
+ },
+ {
+  "match": "AFTHA78451",
+  "field": "model",
+  "name": "Hisense U7 (2026)"
+ },
+ {
+  "match": "AFTCHE92D8",
+  "field": "model",
+  "name": "TCL QM64L Premium QD-Mini LED TV (2026)"
+ },
+ {
+  "match": "AFTAR04B9A",
+  "field": "model",
+  "name": "Onida 4K Smart Fire TV (2026)"
+ },
+ {
+  "match": "AFTPOC9BD3",
+  "field": "model",
+  "name": "Amazon Fire TV Omni QLED Series (2025)"
+ },
+ {
+  "match": "AFTPO9D4D7",
+  "field": "model",
+  "name": "Amazon Fire TV Omni QLED Series (2025)"
+ },
+ {
+  "match": "AFTCU864A2",
+  "field": "model",
+  "name": "Amazon Fire TV 2-Series (2025)"
+ },
+ {
+  "match": "AFTCUD6595",
+  "field": "model",
+  "name": "Amazon Fire TV 2-Series (2025)"
+ },
+ {
+  "match": "AFTNA1322D",
+  "field": "model",
+  "name": "Amazon Fire TV 4-Series (2025)"
+ },
+ {
+  "match": "AFTNA67200",
+  "field": "model",
+  "name": "Amazon Fire TV 4-Series (2025)"
+ },
+ {
+  "match": "AFTMA08C15",
+  "field": "model",
+  "name": "Fire TV Stick 4K Plus (2025)"
+ },
+ {
+  "match": "AFTWYM01",
+  "field": "model",
+  "name": "Fire TV JVC - 4K UHD LCD TV (2025)"
+ },
+ {
+  "match": "AFTTOR001",
+  "field": "model",
+  "name": "Fire TV Panasonic - Z95B/Z90B Series 4K UHD HDR OLED TV (2025)"
+ },
+ {
+  "match": "AFTBR92D74",
+  "field": "model",
+  "name": "Xiaomi TV 4K HDR TV (2026)"
+ },
+ {
+  "match": "AFTMA475B1",
+  "field": "model",
+  "name": "TCL 4K Smart Fire TV QLED Panels (2025)"
+ },
+ {
+  "match": "AFTSH3F7EF",
+  "field": "model",
+  "name": "Regal 4K LED Fire TV (2025)"
+ },
+ {
+  "match": "AFTPOF46A5",
+  "field": "model",
+  "name": "4K Ultra HD Smart TV (2024)"
+ },
+ {
+  "match": "AFTSS",
+  "field": "model",
+  "name": "Fire TV Stick HD Alexa Voice Remote (2024)"
+ },
+ {
+  "match": "UF560",
+  "field": "model",
+  "name": "Funai 4K - Fire TV (2024)"
+ },
+ {
+  "match": "AFTBOXE1",
+  "field": "model",
+  "name": "Panasonic 4K MX800 series with Fire TV (2023)"
+ },
+ {
+  "match": "AFTBTX4",
+  "field": "model",
+  "name": "Redmi 108cm (43 inches) 4K Ultra HD smart LED Fire TV (2023)"
+ },
+ {
+  "match": "AFTMD002",
+  "field": "model",
+  "name": "TCL Class S3 1080p LED Smart TV with Fire TV (2023)"
+ },
+ {
+  "match": "AFTKRT",
+  "field": "model",
+  "name": "Fire TV Stick 4K Max - 2nd Gen (2023) - 16 GB"
+ },
+ {
+  "match": "AFTKM",
+  "field": "model",
+  "name": "Fire TV Stick 4K - 2nd Gen (2023) - 8 GB"
+ },
+ {
+  "match": "AFTSHN02",
+  "field": "model",
+  "name": "TCL 32\" FHD, 40\" FHD Fire TV (2023)"
+ },
+ {
+  "match": "AFTMD001",
+  "field": "model",
+  "name": "Fire TV - TCL S4 Series 4K UHD HDR LED (2023)"
+ },
+ {
+  "match": "AFTKA002",
+  "field": "model",
+  "name": "Fire TV 2-Series (2023)"
+ },
+ {
+  "match": "AFTKAUK002",
+  "field": "model",
+  "name": "Fire TV 2-Series (2023)"
+ },
+ {
+  "match": "AFTHA004",
+  "field": "model",
+  "name": "Fire TV - Hisense 4K UHD (2022)"
+ },
+ {
+  "match": "AFTTIFF43",
+  "field": "model",
+  "name": "Fire TV Omni QLED Series (2022)"
+ },
+ {
+  "match": "AFTGAZL",
+  "field": "model",
+  "name": "Fire TV Cube - 3rd Gen (2022)"
+ },
+ {
+  "match": "AFTANNA0",
+  "field": "model",
+  "name": "Xiaomi F2 4K - Fire TV (2022)"
+ },
+ {
+  "match": "AFTHA001",
+  "field": "model",
+  "name": "Hisense U6 4K UHD - Fire TV (2022)"
+ },
+ {
+  "match": "AFTMON001",
+  "field": "model",
+  "name": "Funai 4K - Fire TV (2022)"
+ },
+ {
+  "match": "AFTMON002",
+  "field": "model",
+  "name": "Funai 4K - Fire TV (2022)"
+ },
+ {
+  "match": "AFTJULI1",
+  "field": "model",
+  "name": "JVC 4K - Fire TV with Freeview Play (2021)"
+ },
+ {
+  "match": "AFTHA003",
+  "field": "model",
+  "name": "Toshiba 4K Far-field UHD - Fire TV (2021)"
+ },
+ {
+  "match": "AFTKA",
+  "field": "model",
+  "name": "Fire TV Stick 4K Max - 1st Gen (2021)"
+ },
+ {
+  "match": "AFTHA002",
+  "field": "model",
+  "name": "Toshiba V35 Series LED FHD/HD - Fire TV (2021)"
+ },
+ {
+  "match": "AFTTI43",
+  "field": "model",
+  "name": "Fire TV 4-Series (2021)"
+ },
+ {
+  "match": "AFTPR001",
+  "field": "model",
+  "name": "AmazonBasics 4K - Fire TV (2020)"
+ },
+ {
+  "match": "AFTBU001",
+  "field": "model",
+  "name": "AmazonBasics HD/FHD - Fire TV (2020)"
+ },
+ {
+  "match": "AFTWMST22",
+  "field": "model",
+  "name": "JVC 2K - Fire TV (2020)"
+ },
+ {
+  "match": "AFTTIFF55",
+  "field": "model",
+  "name": "Onida HD/FHD - Fire TV (2020) [Available in two sizes]"
+ },
+ {
+  "match": "AFTWI001",
+  "field": "model",
+  "name": "ok 4K - Fire TV (2020)"
+ },
+ {
+  "match": "AFTSSS",
+  "field": "model",
+  "name": "Fire TV Stick - 3rd Gen (2020)"
+ },
+ {
+  "match": "AFTDCT31",
+  "field": "model",
+  "name": "Toshiba 4K UHD - Fire TV (2020)"
+ },
+ {
+  "match": "AFTT",
+  "field": "model",
+  "name": "Fire TV Stick - 2nd Gen (2016-2019)"
+ },
+ {
+  "match": "AFTBAMR311",
+  "field": "model",
+  "name": "Toshiba HD - Fire TV (2018-2020)"
+ },
+ {
+  "match": "AFTEAMR311",
+  "field": "model",
+  "name": "Insignia HD - Fire TV (2018-2020)"
+ },
+ {
+  "match": "AFTKMST12",
+  "field": "model",
+  "name": "Toshiba 4K - Fire TV (2018-2019)"
+ },
+ {
+  "match": "AFTLE",
+  "field": "model",
+  "name": "Onida HD - Fire TV (2019)"
+ },
+ {
+  "match": "AFTR",
+  "field": "model",
+  "name": "Fire TV Cube - 2nd Gen (2019)"
+ },
+ {
+  "match": "AFTEUFF014",
+  "field": "model",
+  "name": "Grundig OLED 4K - Fire TV (2019)"
+ },
+ {
+  "match": "AFTEU014",
+  "field": "model",
+  "name": "Grundig Vision 7, 4K - Fire TV (2019)"
+ },
+ {
+  "match": "AFTSO001",
+  "field": "model",
+  "name": "JVC 4K - Fire TV (2019)"
+ },
+ {
+  "match": "AFTMM",
+  "field": "model",
+  "name": "Fire TV Stick 4K - 1st Gen (2018)"
+ },
+ {
+  "match": "AFTEU011",
+  "field": "model",
+  "name": "Grundig Vision 6 HD - Fire TV (2019)"
+ },
+ {
+  "match": "AFTJMST12",
+  "field": "model",
+  "name": "Insignia 4K - Fire TV (2018)"
+ },
+ {
+  "match": "AFTA",
+  "field": "model",
+  "name": "Fire TV Cube - 1st Gen (2018)"
+ },
+ {
+  "match": "AFTRS",
+  "field": "model",
+  "name": "Element 4K - Fire TV (2017)"
+ },
+ {
+  "match": "AFTN",
+  "field": "model",
+  "name": "Fire TV - 3rd Gen (2017)"
+ },
+ {
+  "match": "AFTS",
+  "field": "model",
+  "name": "Fire TV - 2nd Gen (2015)"
+ },
+ {
+  "match": "AFTM",
+  "field": "model",
+  "name": "Fire TV Stick - 1st Gen (2014)"
+ },
+ {
+  "match": "AFTB",
+  "field": "model",
+  "name": "Fire TV - 1st Gen (2014)"
+ },
+ {
+  "match": "foster",
+  "field": "device",
+  "name": "NVIDIA SHIELD TV (2015)"
+ },
+ {
+  "match": "darcy",
+  "field": "device",
+  "name": "NVIDIA SHIELD TV (2017)"
+ },
+ {
+  "match": "mdarcy",
+  "field": "device",
+  "name": "NVIDIA SHIELD TV (2019)"
+ },
+ {
+  "match": "sif",
+  "field": "device",
+  "name": "NVIDIA SHIELD TV Pro (2019)"
+ },
+ {
+  "match": "sabrina",
+  "field": "device",
+  "name": "Chromecast with Google TV (4K)"
+ },
+ {
+  "match": "boreal",
+  "field": "device",
+  "name": "Chromecast with Google TV (HD)"
+ }
+]

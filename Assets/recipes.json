@@ -1,0 +1,151 @@
+[
+ {
+  "name": "Recommended for every TV",
+  "author": "TVDeck",
+  "description": "Every tweak marked Recommended: faster menus, no ad-ID tracking, Wi-Fi stays connected, and Amazon/NVIDIA data uploads off on those devices. Steps that don't fit this TV are skipped. Undo any of them on the Tweaks page.",
+  "steps": [
+   {
+    "tweak": "anim",
+    "value": "0.5"
+   },
+   {
+    "tweak": "limit_ads"
+   },
+   {
+    "tweak": "fire_metrics"
+   },
+   {
+    "tweak": "fire_marketing_metrics"
+   },
+   {
+    "tweak": "debloat_tutorials"
+   },
+   {
+    "tweak": "shield_telemetry"
+   },
+   {
+    "tweak": "wifi_nosleep"
+   },
+   {
+    "tweak": "fire_acr"
+   },
+   {
+    "tweak": "fire_sidewalk"
+   }
+  ]
+ },
+ {
+  "name": "Privacy & fewer ads",
+  "author": "TVDeck",
+  "description": "Ad-blocking DNS for every app, no ad-ID tracking, Google TV recommendation rows off, and Amazon content recognition, Sidewalk and usage uploads off. Free ad-supported apps (Pluto, Tubi) may not play with ad-blocking DNS — set Private DNS back to Default if so.",
+  "steps": [
+   {
+    "tweak": "limit_ads"
+   },
+   {
+    "tweak": "adblock_dns",
+    "value": "dns.adguard-dns.com"
+   },
+   {
+    "tweak": "gtv_recs"
+   },
+   {
+    "tweak": "fire_acr"
+   },
+   {
+    "tweak": "fire_sidewalk"
+   },
+   {
+    "tweak": "fire_metrics"
+   },
+   {
+    "tweak": "fire_marketing_metrics"
+   },
+   {
+    "tweak": "shield_telemetry"
+   }
+  ]
+ },
+ {
+  "name": "Speed up a slow box",
+  "author": "TVDeck",
+  "description": "For 1–2 GB sticks and boxes: animations off, the 2 MB Couchy launcher as the home screen, caches cleared and apps optimized. To go back: Apps → your old launcher → Make home screen. (Fire TV ignores launcher changes and keeps its own home.)",
+  "steps": [
+   {
+    "tweak": "anim",
+    "value": "0.0"
+   },
+   {
+    "install": "couchylauncher"
+   },
+   {
+    "launcher": "com.conreo.couchytv"
+   },
+   {
+    "tweak": "clear_caches"
+   },
+   {
+    "tweak": "optimize_apps"
+   }
+  ]
+ },
+ {
+  "name": "Home media center",
+  "author": "TVDeck",
+  "description": "Jellyfin, VLC and Kodi, faster menus, ad-blocking DNS.",
+  "steps": [
+   {
+    "install": "jellyfin"
+   },
+   {
+    "install": "vlc"
+   },
+   {
+    "install": "kodi"
+   },
+   {
+    "tweak": "anim",
+    "value": "0.5"
+   },
+   {
+    "tweak": "adblock_dns",
+    "value": "dns.adguard-dns.com"
+   }
+  ]
+ },
+ {
+  "name": "Clean home screen",
+  "author": "TVDeck",
+  "description": "Projectivy launcher as the home screen plus Aerial Views screensaver.",
+  "steps": [
+   {
+    "install": "projectivy"
+   },
+   {
+    "tweak": "grant_projectivy"
+   },
+   {
+    "launcher": "com.spocky.projengmenu"
+   },
+   {
+    "install": "aerialviews"
+   },
+   {
+    "tweak": "aerial"
+   }
+  ]
+ },
+ {
+  "name": "Game streaming",
+  "author": "TVDeck",
+  "description": "Moonlight for streaming games from your PC with Sunshine, and the device stays awake while streaming.",
+  "steps": [
+   {
+    "install": "moonlight"
+   },
+   {
+    "tweak": "stay_awake"
+   }
+  ]
+ }
+]

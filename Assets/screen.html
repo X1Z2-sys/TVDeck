@@ -1,0 +1,173 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  html, body { margin: 0; height: 100%; background: transparent; overflow: hidden; user-select: none; }
+  #stage { position: absolute; inset: 0; display: grid; place-items: center; }
+  canvas {
+    max-width: 100%; max-height: 100%; width: auto; height: auto; display: block;
+    border-radius: 10px; background: #000; outline: none; cursor: default;
+    box-shadow: 0 12px 40px rgba(0,0,0,.45), 0 0 0 1px rgba(255,255,255,.06);
+    opacity: 0; transform: scale(.985); transition: opacity .35s ease, transform .45s cubic-bezier(.2,.8,.2,1);
+  }
+  canvas.live { opacity: 1; transform: none; }
+  canvas:focus-visible { box-shadow: 0 12px 40px rgba(0,0,0,.45), 0 0 0 2px #60cdff; }
+  :fullscreen canvas { border-radius: 0; box-shadow: none; }
+  #hud {
+    position: absolute; left: 14px; top: 12px; padding: 4px 9px; border-radius: 6px;
+    font: 600 11px/1.4 "Segoe UI Variable Text", "Segoe UI", sans-serif; letter-spacing: .02em;
+    color: rgba(255,255,255,.85); background: rgba(0,0,0,.5); backdrop-filter: blur(8px);
+    opacity: 0; transition: opacity .2s; pointer-events: none; font-variant-numeric: tabular-nums;
+  }
+  body.stats #hud { opacity: 1; }
+</style>
+</head>
+<body>
+<div id="stage"><canvas id="c" tabindex="0" aria-label="TV screen. Click to control; arrow keys move, Enter selects, Escape goes back."></canvas></div>
+<div id="hud"></div>
+<script>
+'use strict';
+const host = window.chrome.webview;
+const canvas = document.getElementById('c');
+const ctx = canvas.getContext('2d', { alpha: false, desynchronized: true });
+const hud = document.getElementById('hud');
+
+let decoder = null, codec = '', pendingConfig = null, waitKey = true;
+let frames = 0, bytes = 0, lastStat = performance.now(), fps = 0;
+
+const b64 = s => Uint8Array.fromBase64 ? Uint8Array.fromBase64(s) : Uint8Array.from(atob(s), c => c.charCodeAt(0));
+
+// avc1.PPCCLL from the first SPS NAL unit (type 7) in an Annex-B buffer.
+function avcCodec(buf) {
+  for (let i = 0; i + 4 < buf.length; i++) {
+    if (buf[i] === 0 && buf[i + 1] === 0 && (buf[i + 2] === 1 || (buf[i + 2] === 0 && buf[i + 3] === 1))) {
+      const n = i + (buf[i + 2] === 1 ? 3 : 4);
+      if ((buf[n] & 0x1f) === 7) return 'avc1.' + [buf[n + 1], buf[n + 2], buf[n + 3]].map(b => b.toString(16).padStart(2, '0')).join('');
+    }
+  }
+  return null;
+}
+
+function reset(why) {
+  if (decoder && decoder.state !== 'closed') decoder.close();
+  decoder = null; codec = ''; waitKey = true;
+  if (why) host.postMessage({ t: 'error', m: why });
+}
+
+function ensureDecoder(config) {
+  const c = avcCodec(config);
+  if (!c) return false;
+  if (decoder && c === codec) return true;
+  reset();
+  decoder = new VideoDecoder({
+    output: f => {
+      if (canvas.width !== f.displayWidth || canvas.height !== f.displayHeight) {
+        canvas.width = f.displayWidth; canvas.height = f.displayHeight;
+      }
+      ctx.drawImage(f, 0, 0);
+      f.close();
+      frames++;
+      if (!canvas.classList.contains('live')) { canvas.classList.add('live'); canvas.focus(); host.postMessage({ t: 'live' }); }
+    },
+    error: e => reset('Video decoder error: ' + e.message),
+  });
+  // No description → the decoder expects Annex-B, which is exactly what scrcpy sends.
+  decoder.configure({ codec: c, optimizeForLatency: true, hardwareAcceleration: 'prefer-hardware' });
+  codec = c;
+  return true;
+}
+
+host.addEventListener('message', ev => {
+  const m = ev.data;
+  switch (m.k) {
+    case 's':   // session: new size (rotation, resize)
+      canvas.width = m.w; canvas.height = m.h;
+      break;
+    case 'c':   // codec config (SPS/PPS): goes in front of the next frame
+      pendingConfig = b64(m.d);
+      break;
+    case 'f': {
+      let data = b64(m.d);
+      bytes += data.length;
+      if (pendingConfig) {
+        if (!ensureDecoder(pendingConfig)) return;
+        const merged = new Uint8Array(pendingConfig.length + data.length);
+        merged.set(pendingConfig); merged.set(data, pendingConfig.length);
+        data = merged; pendingConfig = null;
+      }
+      if (!decoder) return;
+      if (waitKey && !m.key) return;
+      // If the decoder falls behind (slow PC, burst), skip to the next keyframe instead of lagging.
+      if (decoder.decodeQueueSize > 6 && !m.key) { waitKey = true; return; }
+      waitKey = false;
+      try { decoder.decode(new EncodedVideoChunk({ type: m.key ? 'key' : 'delta', timestamp: m.pts, data })); }
+      catch (e) { reset('Decode failed: ' + e.message); }
+      break;
+    }
+    case 'stats': document.body.classList.toggle('stats', m.on); break;
+    case 'stop': reset(); canvas.classList.remove('live'); ctx.fillRect(0, 0, canvas.width, canvas.height); break;
+    case 'fullscreen': document.fullscreenElement ? document.exitFullscreen() : document.documentElement.requestFullscreen(); break;
+  }
+});
+
+setInterval(() => {
+  const now = performance.now(), dt = (now - lastStat) / 1000;
+  fps = Math.round(frames / dt);
+  hud.textContent = `${canvas.width}×${canvas.height} · ${fps} fps · ${(bytes * 8 / dt / 1e6).toFixed(1)} Mbps · ${codec}`;
+  frames = 0; bytes = 0; lastStat = now;
+}, 1000);
+
+// ---------- input → TV ----------
+function toVideo(e) {
+  const r = canvas.getBoundingClientRect();
+  return { x: Math.round((e.clientX - r.left) * canvas.width / r.width), y: Math.round((e.clientY - r.top) * canvas.height / r.height) };
+}
+let down = false;
+canvas.addEventListener('pointerdown', e => {
+  canvas.focus();
+  if (e.button === 2) { host.postMessage({ t: 'back' }); return; }
+  if (e.button === 1) { host.postMessage({ t: 'key', k: 'HOME', a: 2 }); return; }
+  if (e.button !== 0) return;
+  down = true; canvas.setPointerCapture(e.pointerId);
+  host.postMessage({ t: 'touch', a: 0, ...toVideo(e) });
+});
+canvas.addEventListener('pointermove', e => { if (down) host.postMessage({ t: 'touch', a: 2, ...toVideo(e) }); });
+const up = e => { if (!down) return; down = false; host.postMessage({ t: 'touch', a: 1, ...toVideo(e) }); };
+canvas.addEventListener('pointerup', up);
+canvas.addEventListener('pointercancel', up);
+canvas.addEventListener('contextmenu', e => e.preventDefault());
+canvas.addEventListener('dblclick', e => e.preventDefault());
+canvas.addEventListener('wheel', e => {
+  e.preventDefault();
+  host.postMessage({ t: 'scroll', ...toVideo(e), h: -e.deltaX / 100, v: -e.deltaY / 100 });
+}, { passive: false });
+
+// TV UIs are focus-driven: arrows → D-pad, Enter → select, Esc/Backspace-on-empty → back.
+const KEYMAP = {
+  ArrowUp: 'DPAD_UP', ArrowDown: 'DPAD_DOWN', ArrowLeft: 'DPAD_LEFT', ArrowRight: 'DPAD_RIGHT',
+  Enter: 'DPAD_CENTER', Escape: 'BACK', Backspace: 'DEL', Delete: 'FORWARD_DEL', Tab: 'TAB',
+  Home: 'MOVE_HOME', End: 'MOVE_END', PageUp: 'PAGE_UP', PageDown: 'PAGE_DOWN',
+  MediaPlayPause: 'MEDIA_PLAY_PAUSE', MediaTrackNext: 'MEDIA_NEXT', MediaTrackPrevious: 'MEDIA_PREVIOUS',
+  AudioVolumeUp: 'VOLUME_UP', AudioVolumeDown: 'VOLUME_DOWN', AudioVolumeMute: 'VOLUME_MUTE',
+  F1: 'HOME', F2: 'MENU', F3: 'APP_SWITCH', F11: null,
+};
+canvas.addEventListener('keydown', e => {
+  if (e.key === 'F11') { e.preventDefault(); host.postMessage({ t: 'fullscreen' }); return; }
+  if (e.ctrlKey && e.key.toLowerCase() === 'v') return;   // paste handled below
+  const k = KEYMAP[e.key];
+  if (k) { e.preventDefault(); host.postMessage({ t: 'key', k, a: 0, r: e.repeat ? 1 : 0 }); return; }
+  if (e.key.length === 1 && !e.ctrlKey && !e.altKey && !e.metaKey) { e.preventDefault(); host.postMessage({ t: 'text', s: e.key }); }
+});
+canvas.addEventListener('keyup', e => {
+  const k = KEYMAP[e.key];
+  if (k) { e.preventDefault(); host.postMessage({ t: 'key', k, a: 1 }); }
+});
+canvas.addEventListener('paste', e => {
+  const s = e.clipboardData.getData('text');
+  if (s) host.postMessage({ t: 'text', s });
+});
+host.postMessage({ t: 'ready', webcodecs: typeof VideoDecoder === 'function' });
+</script>
+</body>
+</html>

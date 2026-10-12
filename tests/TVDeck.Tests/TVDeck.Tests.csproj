@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <EnableDefaultItems>true</EnableDefaultItems>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+  <ItemGroup>
+    <!-- The app's own Core sources, so tests exercise the code that ships. WinUI-bound files are excluded. -->
+    <Compile Include="..\..\Core\Adb.cs" Link="Core\Adb.cs" />
+    <Compile Include="..\..\Core\Catalog.cs" Link="Core\Catalog.cs" />
+    <Compile Include="..\..\Core\Debloaters.cs" Link="Core\Debloaters.cs" />
+    <Compile Include="..\..\Core\Device.cs" Link="Core\Device.cs" />
+    <Compile Include="..\..\Core\Log.cs" Link="Core\Log.cs" />
+    <Compile Include="..\..\Core\Snapshots.cs" Link="Core\Snapshots.cs" />
+    <Compile Include="..\..\Core\Tv.cs" Link="Core\Tv.cs" />
+    <Compile Include="..\..\Core\Tweaks.cs" Link="Core\Tweaks.cs" />
+    <!-- Data files the static loaders read from the output directory -->
+    <Content Include="..\..\Assets\*.json" Link="Assets\%(Filename)%(Extension)" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="*" />
+    <PackageReference Include="xunit" Version="*" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="*" />
+  </ItemGroup>
+</Project>

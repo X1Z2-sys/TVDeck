@@ -1,0 +1,141 @@
+# TVDeck Brand Logos
+
+Icons from Simple Icons (CC0 1.0 Universal / Public Domain).
+
+- **chromecast**: chromecast.svg — [Google Cast (4285F4)](https://simpleicons.org/?q=googlecast)
+- **hitachi**: hitachi.svg — [Hitachi (E60027)](https://simpleicons.org/?q=hitachi)
+- **nokia**: nokia.svg — [Nokia (005AFF)](https://simpleicons.org/?q=nokia)
+- **motorola**: motorola.svg — [Motorola (E1140A)](https://simpleicons.org/?q=motorola)
+- **oneplus**: oneplus.svg — [OnePlus (F5010C)](https://simpleicons.org/?q=oneplus)
+
+
+# Wikidata logo pack — companies on Wikipedia's 'List of television manufacturers' and the Android TV / Google TV articles,
+# official logo (Wikidata P154) rendered to 512px PNG by Wikimedia Commons. Trademarks belong to their owners.
+acer.png: Acer logo — Public domain — Acer Group — https://commons.wikimedia.org/wiki/File:Acer_Group_2012.svg
+admiral.png: Admiral logo — Public domain — Admiral appliances.
+
+The original uploader was Benstown at English Wikipedia. — https://commons.wikimedia.org/wiki/File:Admiral_%28electrical_appliances%29_logo.svg
+aiwa.png: Aiwa logo — CC BY-SA 4.0 — Aiwaspain — https://commons.wikimedia.org/wiki/File:Logo_Aiwa_2019.svg
+alba.png: Alba logo — Public domain — Elmwood Studio — https://commons.wikimedia.org/wiki/File:Alba_logo15.png
+amstrad.png: Amstrad logo — Public domain — Amstrad — https://commons.wikimedia.org/wiki/File:Amstrad_logo.svg
+apple.png: Apple Inc. logo — Public domain — Rob Janoff — https://commons.wikimedia.org/wiki/File:Apple_logo_white.svg
+appletv.png: Apple TV logo — Public domain — Apple Inc. — https://commons.wikimedia.org/wiki/File:Apple_TV_logo.svg
+arcelik.png: Arçelik logo — Public domain — Unknown authorUnknown author — https://commons.wikimedia.org/wiki/File:Arcelik_Logo.svg
+archos.png: Archos logo — Public domain — Archos — https://commons.wikimedia.org/wiki/File:Archos-Logo.svg
+asus.png: ASUS logo — Public domain — Asus, extracted by 17jiangz1 — https://commons.wikimedia.org/wiki/File:Asus_31_Years.svg
+bangolufsen.png: Bang & Olufsen logo — Public domain — Bang &amp; Olufsen — https://commons.wikimedia.org/wiki/File:Bang_and_Olufsen_logo.svg
+beko.png: Beko logo — Public domain — Beko Germany GmbH — https://commons.wikimedia.org/wiki/File:Beko_Germany_Logo_2023.svg
+benq.png: BenQ logo — Public domain — BenQ Corporation — https://commons.wikimedia.org/wiki/File:BenQ_2012_logo.svg
+binatone.png: Binatone logo — Public domain — Binatoneglobal — https://commons.wikimedia.org/wiki/File:Binatone_Logo_Small.jpg
+bpl.png: BPL Group logo — Public domain — BPL — https://commons.wikimedia.org/wiki/File:BPL_Logo.svg
+bravia.png: Bravia logo — Public domain — Sony Corporation — https://commons.wikimedia.org/wiki/File:Sony_Bravia_logo.svg
+compal.png: Compal Electronics logo — Public domain — Compal Electronics Inc. — https://commons.wikimedia.org/wiki/File:Compal_logo.svg
+continentaledison.png: Continental Edison logo — Public domain — Arosio Stefano — https://commons.wikimedia.org/wiki/File:Continental_Edison_logo.svg
+daewoo.png: Daewoo logo — Public domain — Daewoo Electronics (now Winia Electronics) — https://commons.wikimedia.org/wiki/File:Logo_wordmark_DAEWOO_Electronics_%28now_Winia_Electronics%29.svg
+dell.png: Dell logo — Public domain — Brand Union Studio (NY)[1] — https://commons.wikimedia.org/wiki/File:Dell_logo_2016.svg
+dixonsretail.png: Dixons Retail logo — Public domain — Dixons plc — https://commons.wikimedia.org/wiki/File:Dixons_Logo.svg
+ekco.png: EKCO logo — CC BY 4.0 — https://commons.wikimedia.org/wiki/User:Fæ — https://commons.wikimedia.org/wiki/File:EKCO_Logo.jpg
+electroluxitaly.png: Electrolux Italy logo — Public domain — electrolux.com — https://commons.wikimedia.org/wiki/File:Electrolux_2015.svg
+emi.png: EMI logo — Public domain — Original: Universal Music Group Vector:  17Drew~commonswiki — https://commons.wikimedia.org/wiki/File:EMI_logo.svg
+eyetv.png: EyeTV logo — Public domain — Geniatech Europe — https://commons.wikimedia.org/wiki/File:EyeTV_logo.svg
+ferranti.png: Ferranti logo — Public domain — ™/®Ferranti International plc — https://commons.wikimedia.org/wiki/File:Ferranti_International_logo.svg
+fnacdarty.png: Fnac Darty logo — Public domain — Groupe Fnac Darty — https://commons.wikimedia.org/wiki/File:Logo_Fnac_Darty.svg
+fujitsu.png: Fujitsu logo — Public domain — Unknown authorUnknown author — https://commons.wikimedia.org/wiki/File:Fujitsu-Logo.svg
+gec.png: General Electric Company plc logo — Public domain — Unknown authorUnknown author — https://commons.wikimedia.org/wiki/File:Logo_General_Electric_Company.svg
+geloso.png: Geloso logo — Public domain — Ricce — https://commons.wikimedia.org/wiki/File:Radio_Geloso_1970.jpg
+goldstar.png: GoldStar logo — CC BY-SA 4.0 — Raphaelbaudet2015 — https://commons.wikimedia.org/wiki/File:GoldStar_Logo.png
+hannstardisplay.png: HannStar Display Corporation logo — Public domain — HannStar — https://commons.wikimedia.org/wiki/File:HannStar.png
+hewlettpackard.png: Hewlett-Packard logo — Public domain — HP Inc. — https://commons.wikimedia.org/wiki/File:HP_logo_2025.svg
+honor.png: Honor logo — Public domain — Huawei — https://commons.wikimedia.org/wiki/File:Huawei_Honor_Logo.svg
+huawei.png: Huawei logo — Public domain — Huawei — https://commons.wikimedia.org/wiki/File:Huawei_wordmark_2019.svg
+igb.png: IGB Electronica logo — Public domain — Pablodiego15 — https://commons.wikimedia.org/wiki/File:Logo_Gradiente.svg
+itel.png: Itel Mobile logo — Public domain — itel Indonesia — https://commons.wikimedia.org/wiki/File:Itel_Indonesia_logo.png
+itt.png: ITT Corporation logo — Public domain — ITT, Inc. — https://commons.wikimedia.org/wiki/File:ITT_logo.svg
+lanix.png: Lanix logo — CC BY-SA 4.0 — unknown — https://commons.wikimedia.org/wiki/File:Lanix-logo.png
+lecom.png: Le.com logo — Public domain — LeTV — https://commons.wikimedia.org/wiki/File:LeTV_logo.png
+lenovo.png: Lenovo logo — Public domain — Lenovo Group — https://commons.wikimedia.org/wiki/File:Lenovo_logo_%282015_onwards%29_2.svg
+luxor.png: Luxor AB logo — CC BY-SA 3.0 — Gegik — https://commons.wikimedia.org/wiki/File:Luxor_reklamskylt_i_Italien.JPG
+magnavox.png: Magnavox logo — Public domain — Magnavox — https://commons.wikimedia.org/wiki/File:Magnavox_Logo.svg
+marantz.png: Marantz logo — Public domain — Unknown authorUnknown author — https://commons.wikimedia.org/wiki/File:Marantz-Logo.svg
+memorex.png: Memorex logo — Public domain — Memorex — https://commons.wikimedia.org/wiki/File:Memorex_logo_1996_sans_trademark.svg
+mitsubishi.png: Mitsubishi Electric logo — Public domain — The original uploader was Cristan at English Wikipedia. — https://commons.wikimedia.org/wiki/File:Mitsubishi_Electric_logo.svg
+nec.png: NEC logo — Public domain — NEC Corporation — https://commons.wikimedia.org/wiki/File:NEC_logo.svg
+orion.png: Orion Electric logo — Public domain — Orion Denki — https://commons.wikimedia.org/wiki/File:Logo_Orion_Denki.svg
+packardbell.png: Packard Bell logo — CC BY 4.0 — Unknown authorUnknown author — https://commons.wikimedia.org/wiki/File:PBlogo.png
+pensonic.png: Pensonic Group logo — Public domain — Pensonic Group — https://commons.wikimedia.org/wiki/File:Pensonic_logo.svg
+philco.png: Philco logo — Public domain — Philco — https://commons.wikimedia.org/wiki/File:Philco_logo.svg
+pioneer.png: Pioneer Corporation logo — Public domain — Pioneer Electronics — https://commons.wikimedia.org/wiki/File:Pioneer_logo.svg
+planarsystems.png: Planar Systems logo — Public domain — Planar Systems — https://commons.wikimedia.org/wiki/File:Planar_Systems_logo.svg
+polytron.png: Polytron logo — Public domain — Polytron (Indonesia) — https://commons.wikimedia.org/wiki/File:Polytron.svg
+pye.png: Pye Ltd. logo — CC BY 2.0 — https://www.flickr.com/people/24001581@N07 — https://commons.wikimedia.org/wiki/File:Pye_Logo.jpg
+quasar.png: Quasar logo — Public domain — Quasar (brand) — https://commons.wikimedia.org/wiki/File:Quasar_logo.svg
+radioshack.png: RadioShack logo — Public domain — RadioShack — https://commons.wikimedia.org/wiki/File:RadioShack_Logo_2013.png
+razer.png: Razer Inc. logo — Public domain — Razer Inc. — https://commons.wikimedia.org/wiki/File:Razer_wordmark.svg
+rca.png: RCA logo — Public domain — RCA Corporation, Gene Grossman, Lippincott &amp; Marguiles — https://commons.wikimedia.org/wiki/File:RCA_Electronics_logo.svg
+replaytv.png: ReplayTV logo — Public domain — Digital Networks North America — https://commons.wikimedia.org/wiki/File:ReplayTV_logo.jpg
+saba.png: SABA logo — Public domain — Unknown authorUnknown author — https://commons.wikimedia.org/wiki/File:SABA_logo.svg
+sansui.png: Sansui Electric logo — Public domain — Sansui Electric — https://commons.wikimedia.org/wiki/File:Sansui_logo.svg
+siemens.png: Siemens logo — Public domain — Siemens AG. — https://commons.wikimedia.org/wiki/File:Siemens_AG_logo.svg
+singer.png: Singer Corporation logo — Attribution — Patrick Soupart - Director of Marketing Singer Europe [2] — https://commons.wikimedia.org/wiki/File:Singer_2007Trans.jpg
+soyo.png: Soyo Group logo — Public domain — Soyo Group — https://commons.wikimedia.org/wiki/File:Soyo_Group_logo.svg
+tatung.png: Tatung Company logo — Public domain — Tatung Co. — https://commons.wikimedia.org/wiki/File:Tatung_logo.svg
+technics.png: Technics logo — Public domain — Unknown authorUnknown author — https://commons.wikimedia.org/wiki/File:Technics-Logo.svg
+teco.png: TECO Electric and Machinery logo — Public domain — TECO Electric and Machinery — https://commons.wikimedia.org/wiki/File:TECO_Electric_and_Machinery_logo_20120316.png
+tpvision.png: TP Vision logo — Public domain — TP Vision — https://commons.wikimedia.org/wiki/File:LOGO_TP_Vision.jpg
+vantiva.png: Vantiva logo — CC BY-SA 4.0 — Vantiva — https://commons.wikimedia.org/wiki/File:Vantiva-logo.png
+vestel.png: Vestel logo — Public domain — Zorlu Holding — https://commons.wikimedia.org/wiki/File:Vestel_logo.svg
+videocon.png: Videocon logo — Public domain — Videocon — https://commons.wikimedia.org/wiki/File:Videocon_logo.jpg
+videoton.png: Videoton logo — CC BY-SA 4.0 — Winters1234 — https://commons.wikimedia.org/wiki/File:Videoton_logo.png
+viewsonic.png: ViewSonic logo — Public domain — Unknown authorUnknown author — https://commons.wikimedia.org/wiki/File:ViewSonic_logo.svg
+whitewestinghouse.png: White-Westinghouse logo — Public domain — Electrolux Group   and  CBS Corporation — https://commons.wikimedia.org/wiki/File:White-Westinghouse_Logo.svg
+zenith.png: Zenith Electronics logo — Public domain — Unknown authorUnknown author — https://commons.wikimedia.org/wiki/File:Zenith_Electronics_Corporation_logo.svg
+
+# Replaced hand-made text wordmarks (SVG <text> doesn't render in WinUI) with Wikidata P154 logos via Commons, or rendered wordmarks where none is freely licensed.
+akai.png: Public domain — Akai Electric Company — https://commons.wikimedia.org/wiki/File:Akai_brand_logo.svg
+amazon.png: Public domain — Amazon.com, Inc., Koto, and NaN (typeface creator) — https://commons.wikimedia.org/wiki/File:Amazon_2024.svg
+android.png: CC BY 3.0 — Android — https://commons.wikimedia.org/wiki/File:Android_2023_3D_logo_and_wordmark.svg
+blaupunkt.png: Public domain — Robert Bosch — https://commons.wikimedia.org/wiki/File:Blaupunkt-brand.svg
+bush.png: wordmark rendered by TVDeck in Segoe UI Black (#1A1A1A) — no freely licensed logo on Commons
+element.png: wordmark rendered by TVDeck in Segoe UI Black (#D32F2F) — no freely licensed logo on Commons
+firetv.png: Public domain — Amazon Inc. — https://commons.wikimedia.org/wiki/File:Amazon_Fire_TV_logo_%28New%29.png
+funai.png: Public domain — © FUNAI ELECTRIC CO., LTD. — https://commons.wikimedia.org/wiki/File:Funai_Denki_Logo.png
+google.png: Public domain — Google LLC — https://commons.wikimedia.org/wiki/File:Google_2026_logo.svg
+googletv.png: wordmark rendered by TVDeck in Segoe UI Black (#4285F4) — no freely licensed logo on Commons
+grundig.png: Public domain — Unknown authorUnknown author — https://commons.wikimedia.org/wiki/File:Grundig_Intermedia_logo.svg
+haier.png: Public domain — Haier — https://commons.wikimedia.org/wiki/File:Haier_logo.svg
+hisense.png: Public domain — HisenseHVAC — https://commons.wikimedia.org/wiki/File:Hisense.svg
+iffalcon.png: wordmark rendered by TVDeck in Segoe UI Black (#FF6700) — no freely licensed logo on Commons
+infinix.png: Public domain — Infinix Mobile — https://commons.wikimedia.org/wiki/File:Infinix_logo.svg
+insignia.png: wordmark rendered by TVDeck in Segoe UI Black (#0046B8) — no freely licensed logo on Commons
+jvc.png: Public domain — HernandoJoseAJ — https://commons.wikimedia.org/wiki/File:JVC_Logo.svg
+kogan.png: wordmark rendered by TVDeck in Segoe UI Black (#ED1C24) — no freely licensed logo on Commons
+lg.png: Public domain — LG Electronics — https://commons.wikimedia.org/wiki/File:LG_Electronics_logo_2015_%28english%29.svg
+loewe.png: Public domain — Loewe.
+
+Original uploader was Александр Мотин at ru.wikipedia — https://commons.wikimedia.org/wiki/File:LOEWE-Logo.svg
+metz.png: Public domain — Unknown authorUnknown author — https://commons.wikimedia.org/wiki/File:Metz_Logo_2013.svg
+micromax.png: wordmark rendered by TVDeck in Segoe UI Black (#F26522) — no freely licensed logo on Commons
+nvidia.png: Apache License 2.0 — Nvidia — https://commons.wikimedia.org/wiki/File:NVIDIA_logo.svg
+onida.png: Public domain — Onida Electronics — https://commons.wikimedia.org/wiki/File:Onida_Electronics.svg
+onn.png: wordmark rendered by TVDeck in Segoe UI Black (#0071DC) — no freely licensed logo on Commons
+panasonic.png: Public domain — Panasonic Holdings Corporation — https://commons.wikimedia.org/wiki/File:Panasonic_Group_logo.svg
+philips.png: Public domain — Koninklijke Philips N.V. — https://commons.wikimedia.org/wiki/File:Philips_shield_%282013%29.svg
+polaroid.png: Public domain — PLR IP Holdings, LLC — https://commons.wikimedia.org/wiki/File:Polaroid_Logo_2020.svg
+realme.png: Public domain — Realme Chongqing Mobile Telecommunications Corp., Ltd. — https://commons.wikimedia.org/wiki/File:Realme_logo_SVG.svg
+redmi.png: Public domain — Xiaomi — https://commons.wikimedia.org/wiki/File:REDMI_logo_%28red%29.svg
+samsung.png: Public domain — Samsung — https://commons.wikimedia.org/wiki/File:Samsung_wordmark.svg
+sanyo.png: Public domain — Sanyo — https://commons.wikimedia.org/wiki/File:Sanyo_logo.svg
+sharp.png: Public domain — Sharp — https://commons.wikimedia.org/wiki/File:Logo_of_the_Sharp_Corporation.svg
+skyworth.png: Public domain — Skyworth Group Co., Ltd.
+创维集团有限公司 — https://commons.wikimedia.org/wiki/File:Logo_Skyworth.svg
+sony.png: Public domain — Sony Group Corporation — https://commons.wikimedia.org/wiki/File:Sony_Group_logo.svg
+tcl.png: Public domain — TCL Electronics — https://commons.wikimedia.org/wiki/File:Logo_of_the_TCL_Corporation.svg
+telefunken.png: Public domain — FZohren — https://commons.wikimedia.org/wiki/File:Telefunken.svg
+thomson.png: wordmark rendered by TVDeck in Segoe UI Black (#E50914) — no freely licensed logo on Commons
+toshiba.png: Public domain — Toshiba Corporation — https://commons.wikimedia.org/wiki/File:Toshiba_logo.svg
+vizio.png: Public domain — Vizio Inc. — https://commons.wikimedia.org/wiki/File:Vizio_logo.svg
+walmart.png: Public domain — Walmart — https://commons.wikimedia.org/wiki/File:Walmart_logo_%282025%29.svg
+walton.png: wordmark rendered by TVDeck in Segoe UI Black (#0072CE) — no freely licensed logo on Commons
+westinghouse.png: Public domain — Westinghouse Electric Corporation — https://commons.wikimedia.org/wiki/File:WestinghouseLogo.svg
+xgimi.png: wordmark rendered by TVDeck in Segoe UI Black (#1A1A1A) — no freely licensed logo on Commons
+xiaomi.png: Public domain — Xiaomi — https://commons.wikimedia.org/wiki/File:Xiaomi_logo_%282021-%29.svg

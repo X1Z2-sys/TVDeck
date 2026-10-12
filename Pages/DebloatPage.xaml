@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Page
+    x:Class="TVDeck.Pages.DebloatPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <ScrollViewer>
+        <StackPanel Padding="36,24,36,36" Spacing="4" MaxWidth="1000" HorizontalAlignment="Left">
+            <TextBlock Style="{StaticResource TitleTextBlockStyle}" Text="Debloater" />
+            <TextBlock Style="{StaticResource BodyTextBlockStyle}" Foreground="{ThemeResource TextFillColorSecondaryBrush}" TextWrapping="Wrap" MaxWidth="760" HorizontalAlignment="Left" Margin="0,0,0,12"
+                       Text="Curated lists from established GitHub projects, matched to this TV. Disable only switches apps off — nothing is uninstalled, Restore turns them back on, and a settings snapshot is saved before the first change." />
+            <ProgressRing x:Name="Ring" IsActive="True" HorizontalAlignment="Left" Margin="0,16" />
+            <TextBlock x:Name="NoDevice" Visibility="Collapsed" Foreground="{ThemeResource TextFillColorSecondaryBrush}" Text="Connect a TV to see which lists fit it." />
+            <StackPanel x:Name="List" Spacing="12">
+                <StackPanel.ChildrenTransitions>
+                    <TransitionCollection>
+                        <EntranceThemeTransition IsStaggeringEnabled="True" />
+                    </TransitionCollection>
+                </StackPanel.ChildrenTransitions>
+            </StackPanel>
+        </StackPanel>
+    </ScrollViewer>
+</Page>

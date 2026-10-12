@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "TVDeck (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "TVDeck (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}

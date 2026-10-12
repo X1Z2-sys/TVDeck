@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Page
+    x:Class="TVDeck.Pages.RecipesPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <Grid Padding="36,24,36,24" ColumnSpacing="24" RowSpacing="16">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="300" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Grid.ColumnSpan="2">
+            <TextBlock Style="{StaticResource TitleTextBlockStyle}" Text="Recipes" />
+            <TextBlock Style="{StaticResource BodyTextBlockStyle}" Foreground="{ThemeResource TextFillColorSecondaryBrush}" TextWrapping="Wrap"
+                       Text="One-click setups: a named list of apps to install and settings to apply. Build your own, then share it as a code anyone can paste in." />
+        </StackPanel>
+
+        <!-- List -->
+        <Grid Grid.Row="1" RowSpacing="8">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <StackPanel Orientation="Horizontal" Spacing="8">
+                <Button Style="{StaticResource AccentButtonStyle}" Click="New_Click">
+                    <StackPanel Orientation="Horizontal" Spacing="8"><FontIcon Glyph="&#xE710;" FontSize="14" /><TextBlock Text="New recipe" /></StackPanel>
+                </Button>
+                <Button Click="Import_Click">
+                    <StackPanel Orientation="Horizontal" Spacing="8"><FontIcon Glyph="&#xE77F;" FontSize="14" /><TextBlock Text="Paste code" /></StackPanel>
+                </Button>
+            </StackPanel>
+            <ListView x:Name="List" Grid.Row="1" SelectionChanged="List_SelectionChanged" SelectionMode="Single">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Padding="0,8">
+                            <TextBlock Style="{StaticResource BodyStrongTextBlockStyle}" Text="{Binding Name}" />
+                            <TextBlock Style="{StaticResource CaptionTextBlockStyle}" Foreground="{ThemeResource TextFillColorSecondaryBrush}" Text="{Binding Summary}" />
+                        </StackPanel>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </Grid>
+
+        <!-- Detail -->
+        <Grid x:Name="Detail" Grid.Row="1" Grid.Column="1" Padding="24" RowSpacing="16" CornerRadius="{StaticResource OverlayCornerRadius}" BorderThickness="1"
+              BorderBrush="{ThemeResource CardStrokeColorDefaultBrush}" Background="{ThemeResource CardBackgroundFillColorDefaultBrush}" Visibility="Collapsed">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Grid ColumnSpacing="12">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+                <StackPanel Spacing="4">
+                    <TextBox x:Name="NameBox" Header="Name" FontSize="18" />
+                    <TextBox x:Name="DescBox" Header="What it sets up" TextWrapping="Wrap" AcceptsReturn="False" />
+                    <TextBox x:Name="AuthorBox" Header="Your name (shown when shared)" />
+                </StackPanel>
+                <StackPanel Grid.Column="1" Spacing="8" VerticalAlignment="Top">
+                    <Button x:Name="RunBtn" Style="{StaticResource AccentButtonStyle}" HorizontalAlignment="Stretch" Click="Run_Click">
+                        <StackPanel Orientation="Horizontal" Spacing="8"><FontIcon Glyph="&#xE768;" FontSize="14" /><TextBlock Text="Run on TV" /></StackPanel>
+                    </Button>
+                    <Button HorizontalAlignment="Stretch" Click="Share_Click">
+                        <StackPanel Orientation="Horizontal" Spacing="8"><FontIcon Glyph="&#xE72D;" FontSize="14" /><TextBlock Text="Copy share code" /></StackPanel>
+                    </Button>
+                    <Button HorizontalAlignment="Stretch" Click="Save_Click">
+                        <StackPanel Orientation="Horizontal" Spacing="8"><FontIcon Glyph="&#xE74E;" FontSize="14" /><TextBlock Text="Save" /></StackPanel>
+                    </Button>
+                    <Button HorizontalAlignment="Stretch" Click="Delete_Click">
+                        <StackPanel Orientation="Horizontal" Spacing="8"><FontIcon Glyph="&#xE74D;" FontSize="14" /><TextBlock Text="Delete" /></StackPanel>
+                    </Button>
+                </StackPanel>
+            </Grid>
+
+            <Grid Grid.Row="1" RowSpacing="8">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <StackPanel Orientation="Horizontal" Spacing="8">
+                    <TextBlock Style="{StaticResource BodyStrongTextBlockStyle}" Text="Steps" VerticalAlignment="Center" />
+                    <DropDownButton Content="Add step">
+                        <DropDownButton.Flyout>
+                            <MenuFlyout>
+                                <MenuFlyoutItem Text="Install an app from the store…" Click="AddInstall_Click" />
+                                <MenuFlyoutItem Text="Install a custom app…" Click="AddCustom_Click" />
+                                <MenuFlyoutItem Text="Set the home screen launcher…" Click="AddLauncher_Click" />
+                                <MenuFlyoutItem Text="Open an app…" Click="AddLaunch_Click" />
+                                <MenuFlyoutItem Text="Run a command…" Click="AddShell_Click" />
+                            </MenuFlyout>
+                        </DropDownButton.Flyout>
+                    </DropDownButton>
+                </StackPanel>
+                <ListView x:Name="Steps" Grid.Row="1" CanReorderItems="True" AllowDrop="True" SelectionMode="None">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <Grid ColumnSpacing="12" Padding="0,6">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="Auto" />
+                                </Grid.ColumnDefinitions>
+                                <FontIcon Glyph="&#xE76F;" FontSize="14" Foreground="{ThemeResource TextFillColorTertiaryBrush}" ToolTipService.ToolTip="Drag to reorder" />
+                                <TextBlock Grid.Column="1" Text="{Binding Text}" TextWrapping="Wrap" VerticalAlignment="Center" />
+                                <Button Grid.Column="2" Style="{StaticResource SubtleButtonStyle}" Click="RemoveStep_Click" Tag="{Binding}" AutomationProperties.Name="Remove step">
+                                    <FontIcon Glyph="&#xE711;" FontSize="12" />
+                                </Button>
+                            </Grid>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </Grid>
+
+            <InfoBar x:Name="RunStatus" Grid.Row="2" IsClosable="False" IsOpen="False" Severity="Informational">
+                <InfoBar.Content>
+                    <ProgressBar x:Name="RunProgress" IsIndeterminate="True" Margin="0,0,0,8" />
+                </InfoBar.Content>
+            </InfoBar>
+        </Grid>
+
+        <StackPanel x:Name="NoneSelected" Grid.Row="1" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" Spacing="8">
+            <FontIcon Glyph="&#xE9D5;" FontSize="40" Foreground="{ThemeResource TextFillColorTertiaryBrush}" />
+            <TextBlock Style="{StaticResource BodyStrongTextBlockStyle}" HorizontalAlignment="Center" Text="Pick a recipe, or make a new one" />
+        </StackPanel>
+    </Grid>
+</Page>
